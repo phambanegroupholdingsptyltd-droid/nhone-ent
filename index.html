@@ -1,22 +1,181 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nhone Trading Enterprise — Mining Supplies, Plant Hire & Logistics | Mokopane, Limpopo</title>
-    <meta name="description" content="Nhone Trading Enterprise is a 100% Black Youth-Owned, B-BBEE Level 1 mining supply, plant hire, logistics and civil works company based in Mokopane, Limpopo, South Africa. Strategic partner to mining operations." />
-    <meta name="keywords" content="plant hire Mokopane, mining supplies Limpopo, B-BBEE Level 1 supplier Mogalakwena, logistics Limpopo, civil works mining, dump truck hire, excavator hire Mokopane, mining PPE supplies" />
-    <meta name="author" content="Nhone Trading Enterprise" />
-    <meta property="og:title" content="Nhone Trading Enterprise — Mining Supplies, Plant Hire & Logistics" />
-    <meta property="og:description" content="100% Black Youth-Owned, B-BBEE Level 1 strategic partner to mining operations in the Mogalakwena district, Limpopo." />
-    <meta property="og:type" content="website" />
-    <meta name="robots" content="index, follow" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nhone Trading Enterprise — Mining Supplies, Plant Hire & Logistics | Mokopane, Limpopo</title>
+  <meta name="description" content="Nhone Trading Enterprise is a 100% Black Youth-Owned, B-BBEE Level 1 mining supply, plant hire, logistics and civil works company based in Mokopane, Limpopo, South Africa. Strategic partner to mining operations." />
+  <meta name="keywords" content="plant hire Mokopane, mining supplies Limpopo, B-BBEE Level 1 supplier Mogalakwena, logistics Limpopo, civil works mining, dump truck hire, excavator hire Mokopane, mining PPE supplies" />
+  <meta name="author" content="Nhone Trading Enterprise" />
+  <meta property="og:title" content="Nhone Trading Enterprise — Mining Supplies, Plant Hire & Logistics" />
+  <meta property="og:description" content="100% Black Youth-Owned, B-BBEE Level 1 strategic partner to mining operations in the Mogalakwena district, Limpopo." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary-color: #f39c12; /* Industrial Orange */
+      --secondary-color: #2c3e50; /* Dark Slate */
+      --text-color: #333;
+      --bg-light: #f9f9f9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--secondary-color);
+    }
+
+    /* Header */
+    header {
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 1.5rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary-color);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1578507065211-1c4e99a5fd24?auto=format&fit=crop&q=80') center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      color: white;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      font-weight: 300;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--primary-color);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Services Section */
+    .services {
+      padding: 80px 5%;
+      background: var(--bg-light);
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--secondary-color);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer p {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Nhone Trading Enterprise</div>
+  </header>
+
+  <section class="hero">
+    <span class="badge">100% Black Youth-Owned | B-BBEE Level 1</span>
+    <h1>Strategic Partner to Mining Operations</h1>
+    <p>Premium mining supply, plant hire, logistics, and civil works based in Mokopane, Limpopo, South Africa.</p>
+  </section>
+
+  <section class="services">
+    <h2>Our Core Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Mining Supplies</h3>
+        <p>Reliable procurement and delivery of specialized mining equipment, PPE, and operational supplies tailored for the Mogalakwena district.</p>
+      </div>
+      <div class="card">
+        <h3>Plant Hire</h3>
+        <p>Heavy machinery and plant hire including dump trucks and excavators, maintained to strict mining safety standards.</p>
+      </div>
+      <div class="card">
+        <h3>Logistics</h3>
+        <p>Efficient and secure transportation and logistics solutions ensuring your materials arrive on site, on time.</p>
+      </div>
+      <div class="card">
+        <h3>Civil Works</h3>
+        <p>Professional civil engineering and earthworks support for large-scale mining and infrastructure projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Nhone Trading Enterprise</strong></p>
+    <p>Mokopane, Limpopo, South Africa</p>
+    <p>&copy; 2026 Nhone Trading Enterprise. All rights reserved.</p>
+  </footer>
+
+</body>
 </html>
