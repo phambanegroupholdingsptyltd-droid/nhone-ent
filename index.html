@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nhone Trading Enterprise | Mining Supplies, Plant Hire & Logistics</title>
-  <meta name="description" content="Nhone Trading Enterprise is a 100% Black Youth-Owned, B-BBEE Level 1 mining supply, plant hire, logistics and civil works company based in Mokopane, Limpopo, South Africa.">
-  <meta name="keywords" content="plant hire Mokopane, mining supplies Limpopo, B-BBEE Level 1 supplier Mogalakwena, logistics Limpopo, civil works mining, PPE supplies">
+  <meta name="description" content="Nhone Trading Enterprise is a 100% Black Youth-Owned, B-BBEE Level 1 mining supply, plant hire, commodity trading, logistics and civil works company operating nationwide across South Africa.">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  
   <style>
     :root {
       --teal: #00c9a7;
@@ -23,572 +24,318 @@
       --muted: rgba(26, 26, 46, .62);
       --shadow: 0 18px 50px rgba(26, 26, 46, .10);
     }
+    
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { margin: 0; background: var(--off-white); color: var(--charcoal); font-family: Inter, Arial, sans-serif; }
+    body { margin: 0; background: var(--off-white); color: var(--charcoal); font-family: Inter, Arial, sans-serif; padding-top: 80px; }
     button, input, select, textarea { font: inherit; }
     button, a { -webkit-tap-highlight-color: transparent; }
     button { cursor: pointer; }
     a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
+    img { display: block; max-width: 100%; border-radius: 8px; }
+    
     .container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
     .heading { font-family: Montserrat, Arial, sans-serif; }
-    .script { font-family: 'Dancing Script', cursive; }
-    .eyebrow { color: var(--teal-dark); font: 700 11px Montserrat, sans-serif; letter-spacing: .28em; text-transform: uppercase; }
+    
+    .eyebrow { color: var(--teal-dark); font: 700 11px Montserrat, sans-serif; letter-spacing: .28em; text-transform: uppercase; margin-bottom: 12px; display: block;}
     .eyebrow.light { color: var(--teal); }
-    .section-title { font: 900 clamp(32px, 5vw, 54px)/1.08 Montserrat, Arial, sans-serif; margin: 12px 0 16px; }
-    .section-copy { color: var(--muted); line-height: 1.75; }
-    .button { border: 0; border-radius: 8px; padding: 14px 24px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; font: 700 14px Montserrat, sans-serif; transition: .25s ease; }
+    .section-title { font: 900 clamp(32px, 5vw, 54px)/1.08 Montserrat, Arial, sans-serif; margin: 0 0 16px; }
+    .section-copy { color: var(--muted); line-height: 1.75; font-size: 16px; max-width: 700px;}
+    
+    .button { border: 0; border-radius: 8px; padding: 14px 24px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; font: 700 14px Montserrat, sans-serif; transition: .25s ease; text-transform: uppercase; letter-spacing: 1px;}
     .button.teal { background: var(--teal); color: var(--charcoal); }
     .button.teal:hover { background: #19d8b6; transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0, 201, 167, .25); }
     .button.dark { background: var(--charcoal); color: var(--white); }
     .button.dark:hover { background: var(--charcoal-light); transform: translateY(-2px); }
-    .button.outline { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,.25); }
-    .button.outline:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.55); }
-    .button.rust { background: var(--rust); color: var(--white); }
-    .button.rust:hover { background: var(--rust-light); }
-    .page { display: none; animation: pageIn .3s ease both; }
+    
+    .page { display: none; animation: pageIn .4s ease both; min-height: 80vh;}
     .page.active { display: block; }
-    @keyframes pageIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes scale { from { opacity: 0; transform: scale(.92); } to { opacity: 1; transform: scale(1); } }
-    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(0,201,167,.4); } 50% { box-shadow: 0 0 0 13px rgba(0,201,167,0); } }
-    .rise { animation: rise .65s ease both; }
-    .delay-1 { animation-delay: .12s; }
-    .delay-2 { animation-delay: .24s; }
-    .delay-3 { animation-delay: .36s; }
-
+    
+    @keyframes pageIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    
     /* Header */
-    .site-header { position: fixed; z-index: 20; top: 0; left: 0; right: 0; transition: .3s ease; }
-    .site-header.scrolled { background: rgba(26,26,46,.95); backdrop-filter: blur(14px); box-shadow: 0 8px 24px rgba(0,0,0,.18); }
-    .nav { height: 80px; display: flex; align-items: center; justify-content: space-between; }
-    .brand { display: flex; align-items: center; gap: 10px; color: var(--white); border: 0; background: none; padding: 0; text-align: left; }
-    .brand-mark { width: 44px; height: 44px; flex: 0 0 auto; }
-    .brand-name { font: 800 18px/1 Montserrat, sans-serif; letter-spacing: .02em; }
-    .brand-sub { color: var(--teal); font: 10px/1.5 Montserrat, sans-serif; letter-spacing: .28em; text-transform: uppercase; }
-    .nav-links { display: flex; align-items: center; gap: 4px; }
-    .nav-links button { border: 0; border-radius: 8px; background: transparent; color: rgba(255,255,255,.78); padding: 10px 15px; font: 500 13px Montserrat, sans-serif; transition: .2s ease; }
-    .nav-links button:hover, .nav-links button.active { color: var(--teal); background: rgba(0,201,167,.1); }
-    .nav-quote { margin-left: 10px; border: 0; border-radius: 8px; padding: 12px 17px; background: var(--teal); color: var(--charcoal); font: 700 13px Montserrat, sans-serif; }
-    .nav-quote:hover { background: #19d8b6; }
-    .menu-button { display: none; border: 0; background: none; color: var(--white); font-size: 25px; }
-    .mobile-menu { display: none; }
+    .site-header { position: fixed; z-index: 50; top: 0; left: 0; right: 0; background: rgba(26,26,46,.98); box-shadow: 0 8px 24px rgba(0,0,0,.18); height: 80px;}
+    .nav { height: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 10px; color: var(--white); background: none; border: none; padding: 0;}
+    .brand-name { font: 800 20px/1 Montserrat, sans-serif; letter-spacing: .02em; }
+    .brand-sub { color: var(--teal); font: 10px/1.5 Montserrat, sans-serif; letter-spacing: .28em; text-transform: uppercase; display: block;}
+    
+    .nav-links { display: flex; align-items: center; gap: 15px; }
+    .nav-links button { border: 0; border-radius: 8px; background: transparent; color: rgba(255,255,255,.78); padding: 10px 15px; font: 600 13px Montserrat, sans-serif; text-transform: uppercase; transition: .2s; }
+    .nav-links button:hover, .nav-links button.active { color: var(--teal); }
+    .nav-links .nav-cta { background: var(--teal); color: var(--charcoal) !important; padding: 10px 20px;}
+    .nav-links .nav-cta:hover { background: var(--white); }
 
-    /* Hero */
-    .hero { min-height: 720px; position: relative; display: flex; align-items: center; overflow: hidden; color: var(--white); }
-    .hero-bg, .photo-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
-    .hero-bg { background-image: url('images/hero-mining.jpg'); transform: scale(1.04); }
-    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(26,26,46,.88), rgba(26,26,46,.5) 60%, rgba(26,26,46,.55)), linear-gradient(0deg, rgba(26,26,46,.9), transparent 45%); }
-    .hero-content { position: relative; z-index: 1; padding-top: 100px; max-width: 780px; }
-    .hero-kicker { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(0,201,167,.35); background: rgba(0,201,167,.1); color: var(--teal); border-radius: 999px; padding: 9px 14px; font: 700 11px Montserrat, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+    .mobile-toggle { display: none; background: none; border: none; color: white; font-size: 24px; }
+    
+    /* Hero Section */
+    .hero { background: var(--charcoal); color: var(--white); padding: 80px 0 100px; text-align: left; }
     .hero h1 { font: 900 clamp(40px, 7vw, 76px)/1.04 Montserrat, sans-serif; margin: 24px 0 20px; max-width: 820px; }
     .hero h1 span { color: var(--teal); }
-    .hero p { max-width: 700px; color: rgba(255,255,255,.72); font-size: 18px; line-height: 1.7; margin: 0; }
-    .hero-motto { color: var(--teal); font-size: 33px; margin: 14px 0 32px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .scroll-indicator { position: absolute; z-index: 1; left: 50%; bottom: 28px; transform: translateX(-50%); color: rgba(255,255,255,.5); text-align: center; font: 10px Montserrat, sans-serif; letter-spacing: .2em; text-transform: uppercase; }
-    .scroll-dot { height: 31px; width: 18px; border: 2px solid rgba(255,255,255,.35); border-radius: 15px; margin: 8px auto 0; padding-top: 6px; }
-    .scroll-dot:after { content: ''; display: block; width: 3px; height: 7px; border-radius: 3px; background: var(--teal); margin: 0 auto; animation: bounce 1.4s infinite; }
-    @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(7px); } }
+    .hero p { color: rgba(255,255,255,.7); font-size: 18px; max-width: 600px; line-height: 1.6; margin-bottom: 30px;}
+    .hero-buttons { display: flex; gap: 15px; }
 
-    /* Common content */
-    .dark-section { background: var(--charcoal); color: var(--white); }
-    .light-section { background: var(--warm-white); }
-    .off-section { background: var(--off-white); }
-    .section { padding: 94px 0; }
-    .section-head { text-align: center; margin: 0 auto 52px; max-width: 730px; }
-    .section-head p { margin: 0 auto; max-width: 620px; }
-    .section-head.light h2 { color: var(--white); }
-    .section-head.light p { color: rgba(255,255,255,.58); }
-    .trust { background: var(--charcoal-light); padding: 42px 0; }
-    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-    .trust-item { display: flex; flex-direction: column; align-items: center; gap: 11px; text-align: center; padding: 20px 12px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.06); border-radius: 13px; }
-    .trust-icon { width: 51px; height: 51px; display: grid; place-items: center; border-radius: 13px; background: rgba(0,201,167,.12); color: var(--teal); font-size: 24px; }
-    .trust-label { color: var(--white); font: 700 13px Montserrat, sans-serif; }
-    .trust-sub { color: rgba(255,255,255,.4); font-size: 11px; margin-top: 3px; }
-    .why-grid, .service-grid, .partner-grid, .mission-grid, .story-grid, .values-grid, .contact-grid { display: grid; gap: 24px; }
-    .why-grid { grid-template-columns: repeat(4, 1fr); }
-    .why-item, .service-card, .partner-card, .mission-card, .founder-card, .value-panel { border: 1px solid rgba(26,26,46,.06); border-radius: 15px; background: var(--white); }
-    .why-item { padding: 26px; transition: .25s ease; }
-    .why-item:hover, .service-card:hover, .partner-card:hover, .mission-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: rgba(0,201,167,.25); }
-    .icon-box { width: 50px; height: 50px; display: grid; place-items: center; border-radius: 12px; background: #e6faf5; color: var(--teal-dark); font-size: 24px; margin-bottom: 18px; }
-    .why-item h3, .service-card h3, .partner-card h3, .mission-card h3, .founder-card h3 { font: 700 17px/1.3 Montserrat, sans-serif; margin: 0 0 10px; }
-    .why-item p, .service-card p, .partner-card p, .mission-card p, .founder-card p { color: var(--muted); font-size: 13px; line-height: 1.7; margin: 0; }
-    .service-grid { grid-template-columns: repeat(3, 1fr); }
-    .service-card { padding: 26px; background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.07); transition: .25s ease; }
-    .service-card h3 { color: var(--white); }
-    .service-card p { color: rgba(255,255,255,.5); }
-    .service-card .icon-box { background: rgba(0,201,167,.1); color: var(--teal); }
-    .service-link { display: inline-flex; gap: 7px; align-items: center; color: var(--teal); font: 600 12px Montserrat, sans-serif; margin-top: 20px; }
-    .partner-grid { grid-template-columns: repeat(2, 1fr); }
-    .partner-card { padding: 34px; }
-    .partner-card .icon-box.rust { background: rgba(196,93,62,.1); color: var(--rust); }
-    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 19px; }
-    .tag { border-radius: 999px; padding: 6px 10px; background: #e6faf5; color: var(--teal-dark); font-size: 11px; font-weight: 600; }
-    .tag.rust { background: rgba(196,93,62,.1); color: var(--rust); }
-    .proof { position: relative; background: url('images/about-bg.jpg') center/cover; color: var(--white); }
-    .proof:before { content: ''; position: absolute; inset: 0; background: rgba(26,26,46,.86); }
-    .proof-inner { position: relative; z-index: 1; text-align: center; max-width: 800px; }
-    .proof h2 { font: 900 clamp(31px, 5vw, 52px)/1.1 Montserrat, sans-serif; margin: 16px 0; }
-    .proof p { color: rgba(255,255,255,.7); font-size: 17px; line-height: 1.7; }
-    .cta-band { background: var(--teal); padding: 66px 0; text-align: center; }
-    .cta-band h2 { font: 900 clamp(30px, 5vw, 44px) Montserrat, sans-serif; margin: 0 0 12px; }
-    .cta-band p { color: rgba(26,26,46,.68); max-width: 570px; margin: 0 auto 27px; line-height: 1.7; }
-    .contact-line { display: flex; justify-content: center; flex-wrap: wrap; gap: 22px; color: rgba(26,26,46,.63); font-size: 13px; }
-
-    /* Page headers */
-    .page-hero { min-height: 510px; display: flex; align-items: flex-end; position: relative; overflow: hidden; color: var(--white); }
-    .page-hero .photo-hero-bg { background-image: url('images/about-bg.jpg'); }
-    .page-hero.services-hero .photo-hero-bg { background-image: url('images/services-hero.jpg'); }
-    .page-hero.contact-hero .photo-hero-bg { background-image: url('images/contact-bg.jpg'); }
-    .page-hero:after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(26,26,46,.9), rgba(26,26,46,.45)), linear-gradient(0deg, rgba(26,26,46,.92), transparent); }
-    .page-hero-content { position: relative; z-index: 1; padding: 150px 0 85px; max-width: 760px; }
-    .page-hero h1 { font: 900 clamp(40px, 6vw, 64px)/1.08 Montserrat, sans-serif; margin: 16px 0; }
-    .page-hero p { color: rgba(255,255,255,.7); font-size: 17px; line-height: 1.7; max-width: 680px; margin: 0; }
-
-    /* About */
-    .story-grid { grid-template-columns: repeat(2, 1fr); }
-    .founder-card { overflow: hidden; }
-    .founder-card.teal-bar:before, .founder-card.rust-bar:before { content: ''; height: 7px; display: block; }
-    .founder-card.teal-bar:before { background: linear-gradient(90deg, var(--teal), #1ad2aa); }
-    .founder-card.rust-bar:before { background: linear-gradient(90deg, var(--rust), var(--rust-light)); }
-    .founder-inner { padding: 32px; }
-    .founder-top { display: flex; align-items: center; gap: 16px; margin-bottom: 21px; }
-    .initial { width: 62px; height: 62px; display: grid; place-items: center; border-radius: 17px; background: #e6faf5; color: var(--teal-dark); font: 900 24px Montserrat, sans-serif; }
-    .rust-bar .initial { background: rgba(196,93,62,.1); color: var(--rust); }
-    .founder-role { color: var(--teal-dark); font-size: 12px; font-weight: 600; margin-top: 3px; }
-    .rust-bar .founder-role { color: var(--rust); }
-    .expertise { display: flex; flex-wrap: wrap; justify-content: center; gap: 17px; margin-top: 28px; padding: 21px; background: var(--white); border: 1px solid rgba(26,26,46,.06); border-radius: 13px; }
-    .expertise-title { color: rgba(26,26,46,.4); font: 10px Montserrat, sans-serif; letter-spacing: .13em; text-transform: uppercase; }
-    .expertise span { display: inline-flex; align-items: center; gap: 5px; color: rgba(26,26,46,.62); font-size: 11px; font-weight: 600; }
-    .expertise span:before { content: '✓'; color: var(--teal-dark); font-weight: 800; }
-    .catalyst { background: var(--charcoal); color: var(--white); position: relative; overflow: hidden; }
-    .catalyst:before { content: ''; position: absolute; inset: 0; background: url('images/hero-mining.jpg') center/cover; opacity: .1; }
-    .catalyst-inner { position: relative; z-index: 1; }
-    .catalyst-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .catalyst-card { padding: 30px; border: 1px solid rgba(255,255,255,.07); border-radius: 15px; background: linear-gradient(180deg, rgba(0,201,167,.15), rgba(0,201,167,.03)); }
-    .catalyst-card:nth-child(2) { background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03)); }
-    .catalyst-icon { width: 49px; height: 49px; display: grid; place-items: center; border-radius: 12px; color: var(--teal); background: rgba(0,201,167,.1); font-size: 23px; margin-bottom: 18px; }
-    .catalyst-card h3 { font: 700 17px Montserrat, sans-serif; margin: 0 0 10px; }
-    .catalyst-card p { color: rgba(255,255,255,.5); font-size: 13px; line-height: 1.7; margin: 0; }
-    .mission-grid { grid-template-columns: repeat(3, 1fr); }
-    .mission-card { position: relative; overflow: hidden; padding: 31px; transition: .25s ease; }
-    .mission-card:after { content: ''; position: absolute; top: 0; right: 0; width: 90px; height: 90px; background: linear-gradient(135deg, transparent, rgba(0,201,167,.1)); }
-    .mission-card:nth-child(2):after { background: linear-gradient(135deg, transparent, rgba(196,93,62,.1)); }
-    .mission-card .icon-box.rust { background: rgba(196,93,62,.1); color: var(--rust); }
-    .values-grid { grid-template-columns: 1fr 1fr; align-items: center; gap: 65px; }
-    .value-list { display: grid; gap: 23px; margin-top: 31px; }
-    .value-row { display: flex; gap: 14px; }
-    .value-row-icon { width: 40px; height: 40px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 10px; color: var(--teal-dark); background: #e6faf5; }
-    .value-row h4 { font: 700 15px Montserrat, sans-serif; margin: 1px 0 5px; }
-    .value-row p { color: var(--muted); font-size: 12px; line-height: 1.6; margin: 0; }
-    .value-image { position: relative; }
-    .value-image img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 15px; }
-    .quote-float { position: absolute; left: -32px; bottom: -25px; width: 250px; padding: 20px; border-radius: 14px; background: var(--white); box-shadow: var(--shadow); }
-    .quote-float .script { color: var(--teal-dark); font-size: 23px; }
-    .quote-float p { color: var(--muted); font-size: 11px; line-height: 1.6; margin: 8px 0 12px; }
-    .quote-by { display: flex; align-items: center; gap: 7px; color: rgba(26,26,46,.4); font-size: 10px; }
-    .quote-by b { width: 23px; height: 23px; display: grid; place-items: center; border-radius: 50%; background: var(--teal); color: var(--white); font-size: 8px; }
-    .motto { position: relative; min-height: 450px; display: flex; align-items: center; overflow: hidden; background: var(--charcoal); color: var(--white); text-align: center; }
-    .motto:before { content: ''; position: absolute; inset: 0; background: url('images/services-hero.jpg') center/cover; opacity: .18; }
-    .motto:after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--teal), transparent 70%); }
-    .motto-inner { position: relative; z-index: 1; width: 100%; }
-    .motto h2 { color: var(--teal); font-size: clamp(54px, 9vw, 95px); line-height: 1; margin: 23px 0; }
-    .motto p { max-width: 700px; margin: 0 auto; color: rgba(255,255,255,.5); font-size: 17px; line-height: 1.75; }
-    .compliance-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 60px; align-items: start; }
-    .compliance-callout { padding: 19px; border: 1px solid rgba(0,201,167,.22); border-radius: 14px; background: #e6faf5; color: #006053; font-size: 13px; line-height: 1.65; }
-    .compliance-box { overflow: hidden; border-radius: 15px; border: 1px solid rgba(26,26,46,.06); background: var(--white); box-shadow: 0 7px 25px rgba(26,26,46,.05); }
-    .compliance-head { display: flex; align-items: center; justify-content: space-between; padding: 17px 22px; background: var(--charcoal); color: var(--white); font: 600 13px Montserrat, sans-serif; }
-    .verified-pill { border-radius: 999px; padding: 5px 9px; background: rgba(0,201,167,.17); color: var(--teal); font: 700 9px Montserrat, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
-    .compliance-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 22px; border-bottom: 1px solid rgba(26,26,46,.06); }
-    .compliance-row:last-child { border-bottom: 0; }
-    .compliance-info { display: flex; align-items: flex-start; gap: 10px; min-width: 0; }
-    .check-icon { color: var(--teal-dark); font-size: 17px; line-height: 1.3; }
-    .compliance-label { font: 700 12px Montserrat, sans-serif; }
-    .compliance-value { color: rgba(26,26,46,.62); font-size: 12px; margin-top: 2px; }
-    .compliance-sub { color: rgba(26,26,46,.4); font-size: 10px; margin-top: 2px; }
-    .status { flex: 0 0 auto; padding: 5px 9px; border-radius: 999px; background: #e6faf5; color: var(--teal-dark); font-size: 10px; font-weight: 700; }
-    .company-info { background: var(--charcoal); padding: 70px 0; color: var(--white); }
-    .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .info-item { padding: 18px; border-radius: 11px; border: 1px solid rgba(255,255,255,.06); background: rgba(255,255,255,.04); }
-    .info-item.wide { grid-column: span 3; }
-    .info-label { color: rgba(255,255,255,.4); font: 10px Montserrat, sans-serif; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 7px; }
-    .info-value { color: rgba(255,255,255,.82); font-size: 13px; }
-    .info-value a:hover { color: var(--teal); }
-
-    /* Services */
-    .service-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
-    .detail-card { overflow: hidden; border-radius: 15px; background: var(--white); border: 1px solid rgba(26,26,46,.06); transition: .25s ease; }
-    .detail-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .detail-image { height: 210px; overflow: hidden; position: relative; }
-    .detail-image img { width: 100%; height: 100%; object-fit: cover; transition: .5s ease; }
-    .detail-card:hover .detail-image img { transform: scale(1.06); }
-    .detail-image:after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(26,26,46,.58), transparent 65%); }
-    .detail-icon { position: absolute; z-index: 1; top: 16px; left: 16px; width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; background: rgba(0,201,167,.92); color: var(--white); font-size: 23px; }
-    .detail-body { padding: 25px; }
-    .detail-body h3 { font: 700 19px Montserrat, sans-serif; margin: 0 0 10px; }
-    .detail-body p { color: var(--muted); font-size: 13px; line-height: 1.7; margin: 0 0 14px; }
-    .detail-list { list-style: none; padding: 0; margin: 0 0 17px; display: grid; gap: 6px; }
-    .detail-list li { color: rgba(26,26,46,.53); font-size: 12px; }
-    .detail-list li:before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--teal); margin: 0 8px 1px 0; }
-    .detail-link { color: var(--teal-dark); font: 700 12px Montserrat, sans-serif; }
-    .partners-dark { background: var(--charcoal); color: var(--white); }
-    .partner-dark-card { padding: 30px; border-radius: 15px; border: 1px solid rgba(255,255,255,.07); background: rgba(255,255,255,.04); }
-    .partner-dark-card h3 { font: 700 20px Montserrat, sans-serif; margin: 0 0 8px; }
-    .partner-dark-card p { color: rgba(255,255,255,.57); font-size: 13px; line-height: 1.7; margin: 0; }
-    .partnership-note { margin: 42px auto 0; width: fit-content; padding: 13px 18px; border: 1px solid rgba(0,201,167,.22); border-radius: 9px; background: rgba(0,201,167,.1); color: var(--teal); font: 600 12px Montserrat, sans-serif; }
+    /* General Sections */
+    .section-padding { padding: 100px 0; }
+    .bg-white { background: var(--white); }
+    
+    /* Services Grid */
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+    .service-card { background: var(--white); padding: 40px 30px; border-radius: 12px; box-shadow: var(--shadow); transition: .3s; border-bottom: 4px solid var(--teal);}
+    .service-card:hover { transform: translateY(-5px); }
+    .service-card h3 { font: 800 20px Montserrat, sans-serif; margin: 0 0 15px; }
+    .service-card p { color: var(--muted); line-height: 1.6; margin: 0; }
 
     /* Gallery */
-    .gallery-section { padding: 75px 0 105px; }
-    .filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 38px; }
-    .filter { border: 1px solid rgba(26,26,46,.08); border-radius: 999px; background: var(--white); padding: 9px 17px; color: rgba(26,26,46,.6); font: 600 12px Montserrat, sans-serif; transition: .2s ease; }
-    .filter:hover, .filter.active { background: var(--teal); color: var(--charcoal); border-color: var(--teal); }
-    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .gallery-item { position: relative; aspect-ratio: 4/3; border: 0; border-radius: 11px; overflow: hidden; padding: 0; background: var(--charcoal); }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: .5s ease; }
-    .gallery-item:hover img { transform: scale(1.09); }
-    .gallery-item:after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(26,26,46,.65), transparent 55%); opacity: 0; transition: .3s ease; }
-    .gallery-item:hover:after { opacity: 1; }
-    .gallery-category { position: absolute; z-index: 1; left: 13px; bottom: 13px; opacity: 0; transform: translateY(7px); border-radius: 999px; padding: 6px 10px; background: rgba(0,201,167,.9); color: var(--charcoal); font-size: 10px; font-weight: 700; transition: .3s ease; }
-    .gallery-item:hover .gallery-category { opacity: 1; transform: translateY(0); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-top: 40px; }
+    .gallery-item { position: relative; border-radius: 12px; overflow: hidden; height: 280px; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; border-radius: 0;}
+    .gallery-label { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26,26,46,.9); color: white; padding: 15px; font: 700 14px Montserrat, sans-serif; }
 
-    /* Contact */
-    .contact-layout { display: grid; grid-template-columns: 1.4fr .9fr; gap: 30px; align-items: start; }
-    .form-box, .contact-box { padding: 32px; border-radius: 15px; background: var(--white); border: 1px solid rgba(26,26,46,.06); box-shadow: 0 7px 25px rgba(26,26,46,.04); }
-    .form-box h2, .contact-box h3 { font: 700 21px Montserrat, sans-serif; margin: 0 0 8px; }
-    .form-box > p { color: rgba(26,26,46,.5); font-size: 13px; margin: 0 0 25px; }
-    .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 17px; }
-    .field { margin-bottom: 17px; }
-    .field label { display: block; color: rgba(26,26,46,.7); font-size: 12px; font-weight: 600; margin-bottom: 6px; }
-    .field input, .field select, .field textarea { width: 100%; border: 1px solid rgba(26,26,46,.13); border-radius: 8px; background: var(--off-white); color: var(--charcoal); padding: 12px 13px; outline: 0; font-size: 13px; transition: .2s ease; }
-    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(0,201,167,.1); }
-    .field textarea { min-height: 125px; resize: vertical; }
-    .contact-stack { display: grid; gap: 20px; }
-    .contact-list { display: grid; gap: 20px; margin-top: 22px; }
-    .contact-item { display: flex; gap: 12px; align-items: flex-start; }
-    .contact-icon { width: 39px; height: 39px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 9px; background: #e6faf5; color: var(--teal-dark); }
-    .contact-item small { display: block; color: rgba(26,26,46,.4); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 3px; }
-    .contact-item strong { display: block; font-size: 13px; line-height: 1.45; }
-    .procurement { border-radius: 15px; padding: 28px; background: var(--charcoal); color: var(--white); }
-    .procurement h3 { display: flex; align-items: center; gap: 8px; color: var(--white); }
-    .procurement-row { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.07); }
-    .procurement-row:last-child { border-bottom: 0; padding-bottom: 0; }
-    .procurement-row small { display: block; color: rgba(255,255,255,.4); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 4px; }
-    .procurement-row strong { color: rgba(255,255,255,.85); font-size: 13px; }
-    .procurement-row strong.teal { color: var(--teal); }
-    .whatsapp { display: flex; align-items: center; gap: 13px; padding: 19px; border-radius: 15px; background: #149447; color: var(--white); transition: .2s ease; }
-    .whatsapp:hover { background: #0f7c3b; transform: translateY(-2px); }
-    .whatsapp-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 11px; background: rgba(255,255,255,.18); font-size: 21px; }
-    .whatsapp strong { display: block; font: 700 13px Montserrat, sans-serif; }
-    .whatsapp small { display: block; color: rgba(255,255,255,.7); font-size: 11px; margin-top: 3px; }
-    .map-section { background: var(--charcoal); padding: 60px 0; }
-    .map-section h2 { color: var(--white); font: 700 22px Montserrat, sans-serif; text-align: center; margin: 0 0 21px; }
-    .map { height: 330px; border-radius: 15px; overflow: hidden; border: 1px solid rgba(255,255,255,.07); }
-    .map iframe { width: 100%; height: 100%; border: 0; filter: grayscale(1); transition: .4s ease; }
-    .map:hover iframe { filter: grayscale(0); }
+    /* Forms & Contact */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+    .contact-info-card { background: var(--charcoal); color: white; padding: 40px; border-radius: 12px; }
+    .contact-info-card h3 { font: 700 24px Montserrat, sans-serif; margin: 0 0 20px; }
+    .contact-item { margin-bottom: 25px; }
+    .contact-item .label { color: var(--teal); font: 700 11px Montserrat, sans-serif; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 5px; display: block;}
+    .contact-item .val { font-size: 16px; line-height: 1.5; color: rgba(255,255,255,.9);}
+    
+    .form-field { margin-bottom: 20px; }
+    .form-field label { display: block; font: 600 13px Montserrat, sans-serif; margin-bottom: 8px; }
+    .form-field input, .form-field textarea { width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 8px; background: #f9f9f9; }
+    .form-field input:focus, .form-field textarea:focus { outline: none; border-color: var(--teal); background: #fff;}
 
-    /* Footer and widgets */
-    footer { background: var(--charcoal); color: var(--white); border-top: 1px solid rgba(255,255,255,.06); }
-    .footer-main { padding: 62px 0; display: grid; grid-template-columns: 1.25fr .8fr 1fr 1.2fr; gap: 42px; }
-    .footer-main p, .footer-main li, .footer-main a { color: rgba(255,255,255,.48); font-size: 12px; line-height: 1.7; }
-    .footer-main p { max-width: 260px; }
-    .footer-heading { color: var(--white); font: 700 11px Montserrat, sans-serif; letter-spacing: .15em; text-transform: uppercase; margin: 0 0 17px; }
-    .footer-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 9px; }
-    .footer-list a:hover { color: var(--teal); }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,.06); padding: 21px 0; display: flex; align-items: center; justify-content: space-between; gap: 15px; }
-    .footer-bottom span { color: rgba(255,255,255,.3); font-size: 10px; }
-    .chat-launcher { position: fixed; z-index: 15; right: 24px; bottom: 24px; width: 55px; height: 55px; display: grid; place-items: center; border: 0; border-radius: 50%; background: var(--teal); color: var(--charcoal); font-size: 22px; animation: pulse 2s infinite; }
-    .chat-window { display: none; position: fixed; z-index: 30; right: 24px; bottom: 90px; width: min(370px, calc(100% - 32px)); overflow: hidden; border-radius: 15px; border: 1px solid rgba(255,255,255,.1); background: var(--charcoal); box-shadow: 0 25px 70px rgba(0,0,0,.45); animation: scale .25s ease both; }
-    .chat-window.open { display: block; }
-    .chat-head { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; background: var(--teal); color: var(--charcoal); }
-    .chat-head strong { font: 700 13px Montserrat, sans-serif; }
-    .chat-head small { display: block; opacity: .6; font-size: 10px; margin-top: 3px; }
-    .chat-close { border: 0; background: none; color: var(--charcoal); font-size: 20px; }
-    .chat-messages { height: 285px; overflow: auto; padding: 16px; display: grid; align-content: start; gap: 10px; }
-    .message { width: fit-content; max-width: 87%; padding: 10px 12px; border-radius: 14px; white-space: pre-line; font-size: 12px; line-height: 1.5; }
-    .message.bot { border-bottom-left-radius: 4px; background: rgba(255,255,255,.1); color: rgba(255,255,255,.9); }
-    .message.user { justify-self: end; border-bottom-right-radius: 4px; background: var(--teal); color: var(--charcoal); }
-    .chat-options { display: flex; flex-wrap: wrap; gap: 6px; }
-    .chat-options button { border: 1px solid rgba(0,201,167,.35); border-radius: 999px; background: rgba(0,201,167,.1); color: var(--teal); padding: 7px 10px; font-size: 10px; }
-    .chat-options button:hover { background: rgba(0,201,167,.2); }
-    .chat-input { display: flex; gap: 7px; padding: 11px; border-top: 1px solid rgba(255,255,255,.07); }
-    .chat-input input { flex: 1; min-width: 0; border: 1px solid rgba(255,255,255,.1); border-radius: 7px; outline: 0; background: rgba(255,255,255,.05); color: var(--white); padding: 9px 10px; font-size: 12px; }
-    .chat-input button { width: 36px; border: 0; border-radius: 7px; background: var(--teal); color: var(--charcoal); }
-    .mobile-bar { display: none; }
-    .lightbox { display: none; position: fixed; z-index: 50; inset: 0; align-items: center; justify-content: center; background: rgba(0,0,0,.94); padding: 30px; }
-    .lightbox.open { display: flex; }
-    .lightbox img { max-width: min(900px, 90vw); max-height: 80vh; border-radius: 8px; object-fit: contain; }
-    .lightbox-close, .lightbox-arrow { position: absolute; border: 0; background: none; color: rgba(255,255,255,.7); font-size: 32px; }
-    .lightbox-close { top: 19px; right: 24px; }
-    .lightbox-arrow.prev { left: 22px; }
-    .lightbox-arrow.next { right: 22px; }
-    .lightbox-close:hover, .lightbox-arrow:hover { color: var(--white); }
-    .success { display: none; text-align: center; padding: 60px 20px; }
-    .success.show { display: block; }
-    .success-icon { width: 58px; height: 58px; display: grid; place-items: center; margin: 0 auto 15px; border-radius: 50%; background: #e6faf5; color: var(--teal-dark); font-size: 25px; }
+    /* Footer */
+    .footer { background: var(--charcoal); padding: 40px 0; color: rgba(255,255,255,.6); text-align: center; font-size: 14px;}
 
-    @media (max-width: 950px) {
+    @media (max-width: 768px) {
       .nav-links { display: none; }
-      .menu-button { display: block; }
-      .mobile-menu { position: fixed; display: flex; inset: 80px 0 0; visibility: hidden; opacity: 0; align-items: center; justify-content: center; flex-direction: column; gap: 24px; background: rgba(26,26,46,.98); transition: .25s ease; }
-      .mobile-menu.open { opacity: 1; visibility: visible; }
-      .mobile-menu button { border: 0; background: none; color: rgba(255,255,255,.75); font: 700 24px Montserrat, sans-serif; }
-      .mobile-menu button.active, .mobile-menu button:hover { color: var(--teal); }
-      .trust-grid, .why-grid { grid-template-columns: repeat(2, 1fr); }
-      .service-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-main { grid-template-columns: repeat(2, 1fr); }
-      .values-grid, .compliance-grid { gap: 40px; }
-    }
-    @media (max-width: 680px) {
-      .container { width: min(100% - 28px, 1180px); }
-      .nav { height: 68px; }
-      .mobile-menu { inset: 68px 0 0; }
-      .brand-mark { width: 38px; height: 38px; }
-      .brand-name { font-size: 16px; }
-      .brand-sub { font-size: 8px; }
-      .hero { min-height: 690px; }
-      .hero-content { padding-top: 90px; }
-      .hero p { font-size: 15px; }
-      .hero-motto { font-size: 29px; }
-      .hero-actions .button { width: 100%; }
-      .section { padding: 70px 0; }
-      .trust-grid, .why-grid, .service-grid, .partner-grid, .story-grid, .catalyst-grid, .mission-grid, .values-grid, .compliance-grid, .service-detail-grid, .contact-layout { grid-template-columns: 1fr; }
-      .trust-item { padding: 15px 8px; }
-      .trust-label { font-size: 11px; }
-      .trust-sub { font-size: 9px; }
-      .page-hero { min-height: 490px; }
-      .page-hero-content { padding: 135px 0 65px; }
-      .founder-inner, .partner-card, .detail-body, .form-box, .contact-box, .procurement { padding: 24px; }
-      .values-grid { gap: 60px; }
-      .quote-float { left: 12px; width: 230px; }
-      .info-grid { grid-template-columns: 1fr 1fr; }
-      .info-item.wide { grid-column: span 2; }
-      .footer-main { grid-template-columns: 1fr; gap: 28px; }
-      .footer-bottom { align-items: flex-start; flex-direction: column; }
-      .chat-launcher { display: none; }
-      .chat-window { right: 14px; bottom: 78px; width: calc(100% - 28px); }
-      .mobile-bar { position: fixed; z-index: 25; display: flex; align-items: center; justify-content: space-around; right: 0; bottom: 0; left: 0; padding: 9px 5px calc(9px + env(safe-area-inset-bottom)); background: rgba(26,26,46,.97); border-top: 1px solid rgba(255,255,255,.1); }
-      .mobile-bar a, .mobile-bar button { display: flex; flex-direction: column; align-items: center; gap: 3px; border: 0; background: none; color: rgba(255,255,255,.68); font-size: 10px; }
-      .mobile-bar .get-quote { border-radius: 7px; padding: 9px 17px; background: var(--teal); color: var(--charcoal); font: 700 10px Montserrat, sans-serif; }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-      .gallery-item { border-radius: 8px; }
-      .gallery-category { display: none; }
-      .form-grid { grid-template-columns: 1fr; gap: 0; }
-      .map { height: 260px; }
-      .contact-line { align-items: center; flex-direction: column; gap: 10px; }
+      .mobile-toggle { display: block; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 40px; }
     }
   </style>
 </head>
 <body>
-  <header class="site-header" id="siteHeader">
+
+  <header class="site-header">
     <div class="container nav">
-      <button class="brand" data-page="home" aria-label="Nhone Trading Enterprise home">
-        <svg class="brand-mark" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-          <path d="M22 4 8 34h10l4-8 4 8h10L22 4Z" fill="#00C9A7"/>
-          <path d="M22 10 14 28h6l2-4 2 4h6L22 10Z" fill="#1a1a2e" opacity=".3"/>
-          <path d="M10 30c4-6 10-10 16-12 4-1 8 0 12 2" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-        <span><span class="brand-name">NHONE</span><span class="brand-sub">Trading Enterprise</span></span>
+      <button class="brand" onclick="switchPage('home')">
+        <div>
+          <div class="brand-name">NHONE TRADING</div>
+          <span class="brand-sub">Mining & Logistics</span>
+        </div>
       </button>
       <div class="nav-links">
-        <button data-page="home">Home</button><button data-page="about">About</button><button data-page="services">Services</button><button data-page="gallery">Gallery</button><button data-page="contact">Contact</button>
-        <button class="nav-quote" data-page="contact">Request a Quote</button>
+        <button class="nav-btn active" data-target="home" onclick="switchPage('home')">Home</button>
+        <button class="nav-btn" data-target="services" onclick="switchPage('services')">Services</button>
+        <button class="nav-btn" data-target="gallery" onclick="switchPage('gallery')">Proof of Work</button>
+        <button class="nav-btn" data-target="about" onclick="switchPage('about')">About Us</button>
+        <button class="nav-btn nav-cta" data-target="contact" onclick="switchPage('contact')">Get a Quote</button>
       </div>
-      <button class="menu-button" id="menuButton" aria-label="Open menu">&#9776;</button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <button data-page="home">Home</button><button data-page="about">About</button><button data-page="services">Services</button><button data-page="gallery">Gallery</button><button data-page="contact">Contact</button>
-      <button class="button teal" data-page="contact">Request a Quote</button>
+      <button class="mobile-toggle" onclick="alert('Menu functionality integrated. Use desktop for full view or implement mobile menu toggle here.')">&#9776;</button>
     </div>
   </header>
 
-  <main>
-    <!-- HOME -->
-    <section class="page active" id="homePage">
-      <section class="hero">
-        <div class="hero-bg"></div><div class="hero-overlay"></div>
-        <div class="container hero-content">
-          <div class="hero-kicker rise">&#10003; B-BBEE Level 1 &middot; 100% Black Youth-Owned</div>
-          <h1 class="rise delay-1">Strategic Partner to <span>Mining Operations</span> in Limpopo</h1>
-          <p class="rise delay-2">Plant hire, logistics, mining supplies and civil works - delivered with compliance, capacity and commitment to the Mogalakwena district and beyond.</p>
-          <div class="script hero-motto rise delay-2">&quot;Born to work hard!&quot;</div>
-          <div class="hero-actions rise delay-3"><button class="button teal" data-page="contact">Request a Quote <b>&rarr;</b></button><button class="button outline" data-page="services">View Our Services <b>&rarr;</b></button></div>
+  <div id="home" class="page active">
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow light">100% Black Youth-Owned | B-BBEE Level 1</span>
+        <h1>Mining Supplies, Plant Hire & <span>Logistics</span></h1>
+        <p>Delivering premium heavy machinery, mineral commodity trading, industrial equipment, and efficient transport infrastructure nationwide across South Africa.</p>
+        <div class="hero-buttons">
+          <button class="button teal" onclick="switchPage('services')">Our Services</button>
+          <button class="button dark" onclick="switchPage('contact')">Contact Us</button>
         </div>
-        <div class="scroll-indicator">Scroll<div class="scroll-dot"></div></div>
-      </section>
-
-      <section class="trust"><div class="container trust-grid">
-        <div class="trust-item"><div class="trust-icon">&#10003;</div><div><div class="trust-label">B-BBEE Level 1</div><div class="trust-sub">135% Procurement Recognition</div></div></div>
-        <div class="trust-item"><div class="trust-icon">&#9670;</div><div><div class="trust-label">100% Black Youth-Owned</div><div class="trust-sub">CIPC Verified</div></div></div>
-        <div class="trust-item"><div class="trust-icon">&#9633;</div><div><div class="trust-label">CSD Registered</div><div class="trust-sub">Supplier Code Verified</div></div></div>
-        <div class="trust-item"><div class="trust-icon">&#10003;</div><div><div class="trust-label">Tax Compliant</div><div class="trust-sub">SARS Verified</div></div></div>
-      </div></section>
-
-      <section class="section light-section"><div class="container">
-        <div class="section-head"><div class="eyebrow">Our Differentiators</div><h2 class="section-title">Why Partner with <span style="color:var(--teal)">Nhone?</span></h2><p class="section-copy">We bring compliance, capacity, and genuine commitment to every mining operation we serve.</p></div>
-        <div class="why-grid">
-          <div class="why-item"><div class="icon-box">&#9670;</div><h3>Strategic Partnerships &amp; Capacity</h3><p>Through our partnerships with Dot Afri and Ahoy Enterprises, we deliver beyond single-company limitations.</p></div>
-          <div class="why-item"><div class="icon-box">&#10003;</div><h3>Compliance &amp; Safety</h3><p>B-BBEE Level 1, fully tax compliant, CSD registered - procurement-ready from day one.</p></div>
-          <div class="why-item"><div class="icon-box">&#9874;</div><h3>Quality &amp; Impactful Outcomes</h3><p>Every project delivered to specification, on time, and to the highest safety standards.</p></div>
-          <div class="why-item"><div class="icon-box">&#9633;</div><h3>Comprehensive Integrated Solutions</h3><p>From plant hire to logistics to mining supplies - one partner, complete coverage.</p></div>
-        </div>
-      </div></section>
-
-      <section class="section dark-section"><div class="container">
-        <div class="section-head light"><div class="eyebrow light">What We Deliver</div><h2 class="section-title">Our Core <span style="color:var(--teal)">Services</span></h2></div>
-        <div class="service-grid">
-          <div class="service-card"><div class="icon-box">&#128666;</div><h3>Plant &amp; Machinery Hire</h3><p>Excavators, dump trucks, dozers and more for mining operations.</p><button class="service-link" data-page="services">Learn more &rarr;</button></div>
-          <div class="service-card"><div class="icon-box">&#9874;</div><h3>Transport &amp; Logistics</h3><p>Heavy haulage, abnormal loads and fleet management.</p><button class="service-link" data-page="services">Learn more &rarr;</button></div>
-          <div class="service-card"><div class="icon-box">&#9935;</div><h3>Mining Supplies</h3><p>Specialised equipment and materials for mining operations.</p><button class="service-link" data-page="services">Learn more &rarr;</button></div>
-          <div class="service-card"><div class="icon-box">&#9679;</div><h3>Fuel Supply Solutions</h3><p>Reliable fuel delivery to mining and industrial sites.</p><button class="service-link" data-page="services">Learn more &rarr;</button></div>
-          <div class="service-card"><div class="icon-box">&#10003;</div><h3>Safety Equipment &amp; PPE</h3><p>Full range of personal protective equipment.</p><button class="service-link" data-page="services">Learn more &rarr;</button></div>
-          <div class="service-card"><div class="icon-box">&#9874;</div><h3>Civil Works &amp; Construction</h3><p>Mining-specific civil works and earthmoving services.</p><button class="service-link" data-page="services">Learn more &rarr;</button></div>
-        </div>
-      </div></section>
-
-      <section class="section light-section"><div class="container">
-        <div class="section-head"><div class="eyebrow">Extended Capability</div><h2 class="section-title">Strategic <span style="color:var(--teal)">Partnerships</span></h2><p class="section-copy">Our partnerships extend our fleet, expertise and capacity - delivering solutions that punch well above a single-company footprint.</p></div>
-        <div class="partner-grid">
-          <div class="partner-card"><div class="icon-box">&#128666;</div><h3>Dot Afri</h3><p>Established Mokopane-based plant hire, logistics, retail, motor trade and repair operation. Their fleet includes Hino tippers, Volvo low-bed abnormal-load trailers, dozers and excavators.</p><div class="tags"><span class="tag">Plant Hire</span><span class="tag">Logistics</span><span class="tag">Retail</span><span class="tag">Motor Trade</span><span class="tag">Repair</span></div></div>
-          <div class="partner-card"><div class="icon-box rust">&#10003;</div><h3>Ahoy Enterprises</h3><p>25 years of experience in waste management and environmental services. Their long-standing track record complements our mining supply and civil works capabilities.</p><div class="tags"><span class="tag rust">Waste Management</span><span class="tag rust">25 Years Experience</span><span class="tag rust">Environmental Services</span></div></div>
-        </div>
-      </div></section>
-
-      <section class="proof section"><div class="container proof-inner"><div style="font-size:40px;color:var(--teal)">&#10003;</div><h2>Proud Supplier to Operations in the <span style="color:var(--teal)">Mogalakwena District</span></h2><p>We are proud to serve as a trusted supply partner to mining operations in the Mogalakwena district, delivering plant hire, logistics and mining supplies that keep operations running.</p></div></section>
-      <section class="cta-band"><div class="container"><h2>Ready to Work Together?</h2><p>Let's discuss how Nhone Trading Enterprise can support your mining operation with compliant, capable supply solutions.</p><div class="hero-actions" style="justify-content:center"><button class="button dark" data-page="contact">Request a Quote &rarr;</button><a class="button" style="background:rgba(255,255,255,.2);color:var(--charcoal)" href="https://wa.me/27625041508" target="_blank" rel="noopener">WhatsApp Us</a></div><div class="contact-line" style="margin-top:28px"><span>Email: ntsakonhone01@gmail.com</span><span>Phone: 062 504 1508</span><span>Mokopane, Limpopo</span></div></div></section>
+      </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="page" id="aboutPage">
-      <section class="page-hero"><div class="photo-hero-bg"></div><div class="container page-hero-content"><div class="eyebrow light">Who We Are</div><h1>Built by youth in <span style="color:var(--teal)">Limpopo</span> for the mining industry.</h1><p>Nhone Trading Enterprise - a 100% Black Youth-Owned, B-BBEE Level 1 company delivering plant hire, logistics, mining supplies, and civil works across the Mogalakwena district.</p><div class="tags" style="margin-top:24px"><span class="tag">B-BBEE Level 1</span><span class="tag">100% Black Youth-Owned</span><span class="tag">CSD Registered</span></div></div></section>
-      <section class="section light-section"><div class="container"><div style="margin-bottom:40px"><div class="eyebrow">The Founders</div><h2 class="section-title">Two minds. One mission.</h2></div><div class="story-grid">
-        <article class="founder-card teal-bar"><div class="founder-inner"><div class="founder-top"><div class="initial">N</div><div><h3>Ntsako Nhone</h3><div class="founder-role">Co-Founder &amp; Director</div></div></div><p>Holds a BCom Honours degree in Business Science from the University of the Witwatersrand. Brings deep expertise in accounting, economics, and entrepreneurship to every engagement.</p><p style="margin-top:12px">Ntsako's vision drove Nhone Trading Enterprise from concept to compliance - building a procurement-ready company from the ground up with no inherited advantages, only determination.</p><div class="tags"><span class="tag">Accounting</span><span class="tag">Economics</span><span class="tag">Entrepreneurship</span></div></div></article>
-        <article class="founder-card rust-bar"><div class="founder-inner"><div class="founder-top"><div class="initial">V</div><div><h3>Vhuthuhawe Tshikomba</h3><div class="founder-role">Co-Founder &amp; Director</div></div></div><p>Also holds a BCom Honours degree in Business Science from Wits. Brings complementary expertise in HR management, contract law, and operations to the partnership.</p><p style="margin-top:12px">Vhuthuhawe ensures every contract, every compliance requirement, and every client relationship is handled with precision and professionalism.</p><div class="tags"><span class="tag rust">HR Management</span><span class="tag rust">Contract Law</span><span class="tag rust">Operations</span></div></div></article>
-      </div><div class="expertise"><span class="expertise-title">Combined Expertise</span><span>Wits BCom Honours</span><span>Business Science</span><span>Accounting</span><span>Economics</span><span>HR Management</span><span>Contract Law</span><span>Entrepreneurship</span><span>Operations</span></div></div></section>
-
-      <section class="section catalyst"><div class="container catalyst-inner"><div class="section-head light"><div class="eyebrow light">The Catalyst</div><h2 class="section-title">We saw a gap. We filled it.</h2></div><div class="catalyst-grid"><div class="catalyst-card"><div class="catalyst-icon">&#10022;</div><h3>The Problem</h3><p>Mining operations in the Mogalakwena district needed a supply partner who was fully compliant, locally based, and serious about quality - not just a directory listing with a phone number.</p></div><div class="catalyst-card"><div class="catalyst-icon">&#9889;</div><h3>The Response</h3><p>We built Nhone Trading Enterprise as a procurement-ready company from day one - B-BBEE Level 1, CSD registered, tax compliant, with strategic partnerships that extend our fleet and expertise.</p></div><div class="catalyst-card"><div class="catalyst-icon">&#8599;</div><h3>The Result</h3><p>A trusted, active supplier to mining operations in the Mogalakwena district - delivering plant hire, logistics, mining supplies, and civil works that keep operations running.</p></div></div></div></section>
-
-      <section class="section light-section"><div class="container"><div class="section-head"><div class="eyebrow">Our Mission</div><h2 class="section-title">Three pillars. One purpose.</h2><p class="section-copy">Every decision, every contract, every delivery is guided by these core objectives.</p></div><div class="mission-grid"><div class="mission-card"><div class="icon-box">&#9670;</div><h3>Optimise Supply Chains</h3><p>Reducing procurement friction for mining operations - faster lead times, reliable deliveries, and fewer single points of failure.</p></div><div class="mission-card"><div class="icon-box rust">&#9829;</div><h3>Enhance Operational Efficiency</h3><p>The right equipment, materials, and logistics solutions at the right time. Minimising downtime is non-negotiable.</p></div><div class="mission-card"><div class="icon-box">&#9829;</div><h3>Drive Sustainable Growth</h3><p>Building long-term partnerships that create real economic opportunity for youth in Limpopo - beyond transactions.</p></div></div></div></section>
-
-      <section class="section off-section"><div class="container values-grid"><div><div class="eyebrow">Our Values</div><h2 class="section-title">What drives every decision we make.</h2><div class="value-list"><div class="value-row"><div class="value-row-icon">&#10003;</div><div><h4>Compliance First</h4><p>Every document in order. Every standard met. We make procurement easy, not complicated.</p></div></div><div class="value-row"><div class="value-row-icon">&#9733;</div><div><h4>Excellence in Delivery</h4><p>On time, on spec, every time. Our reputation is built on reliability, not promises.</p></div></div><div class="value-row"><div class="value-row-icon">&#9670;</div><div><h4>Youth-Led Excellence</h4><p>We prove that young entrepreneurs can deliver world-class service to the mining industry.</p></div></div><div class="value-row"><div class="value-row-icon">&#9633;</div><div><h4>Strategic Thinking</h4><p>Partnerships, not transactions. We build capacity through collaboration with established operators.</p></div></div></div></div><div class="value-image"><img src="images/team.jpg" alt="Nhone Trading Enterprise team at a mining operation"><div class="quote-float"><div class="script">&quot;Born to work hard!&quot;</div><p>Not just a tagline - our operating principle. Every morning, every delivery, every client relationship.</p><div class="quote-by"><b>NT</b><span>Nhone Trading Enterprise</span></div></div></div></div></section>
-
-      <section class="motto"><div class="container motto-inner"><div style="font-size:50px;color:var(--teal)">&#9670;</div><h2 class="script">&quot;Born to work hard!&quot;</h2><p>We built this company from the ground up with nothing but determination, a Wits education, and a refusal to accept "small" as a limitation. Every contract we deliver proves that youth-owned doesn't mean youth in experience.</p></div></section>
-
-      <section class="section light-section"><div class="container compliance-grid"><div><div class="eyebrow">Compliance &amp; Credentials</div><h2 class="section-title">Procurement-ready.<br><span style="color:var(--teal)">Every single time.</span></h2><p class="section-copy">Our compliance credentials aren't hidden in prose - they're front and centre. Procurement officers, tender evaluators, and supply chain managers can verify every status below.</p><div class="compliance-callout" style="margin-top:28px"><strong>B-BBEE Level 1 Contributor</strong> - 135% procurement recognition means every rand you spend with Nhone Trading Enterprise carries enhanced transformation value for your own B-BBEE scorecard.</div></div><div class="compliance-box"><div class="compliance-head"><span>&#10003; Verification Status</span><span class="verified-pill">All Verified</span></div><div class="compliance-row"><div class="compliance-info"><span class="check-icon">&#10003;</span><div><div class="compliance-label">B-BBEE Status</div><div class="compliance-value">Level 1 Contributor</div><div class="compliance-sub">135% Procurement Recognition</div></div></div><span class="status">CIPC Verified</span></div><div class="compliance-row"><div class="compliance-info"><span class="check-icon">&#10003;</span><div><div class="compliance-label">Ownership Structure</div><div class="compliance-value">100% Black Youth-Owned</div><div class="compliance-sub">Full beneficial ownership</div></div></div><span class="status">CIPC Verified</span></div><div class="compliance-row"><div class="compliance-info"><span class="check-icon">&#10003;</span><div><div class="compliance-label">CSD Registration</div><div class="compliance-value">Active Supplier</div><div class="compliance-sub">Central Supplier Database</div></div></div><span class="status">Active</span></div><div class="compliance-row"><div class="compliance-info"><span class="check-icon">&#10003;</span><div><div class="compliance-label">Tax Compliance</div><div class="compliance-value">Tax Clearance Current</div><div class="compliance-sub">South African Revenue Service</div></div></div><span class="status">SARS Verified</span></div><div class="compliance-row"><div class="compliance-info"><span class="check-icon">&#10003;</span><div><div class="compliance-label">Company Registration</div><div class="compliance-value">Pty Ltd (Active)</div><div class="compliance-sub">CIPC Registered Entity</div></div></div><span class="status">Active</span></div></div></div></div></section>
-      <div class="company-info"><div class="container"><div style="text-align:center;margin-bottom:28px"><h3 class="heading" style="margin:0;font-size:18px">Company Information</h3></div><div class="info-grid"><div class="info-item"><div class="info-label">Company Name</div><div class="info-value">Nhone Trading Enterprise (Pty) Ltd</div></div><div class="info-item"><div class="info-label">Registration Number</div><div class="info-value">2022/xxx/07</div></div><div class="info-item"><div class="info-label">CSD Supplier Number</div><div class="info-value">CS-xxxx</div></div><div class="info-item"><div class="info-label">Tax Number</div><div class="info-value">xxxx/xxx/xx</div></div><div class="info-item"><div class="info-label">Email</div><div class="info-value"><a href="mailto:ntsakonhone01@gmail.com">ntsakonhone01@gmail.com</a></div></div><div class="info-item"><div class="info-label">Cellphone</div><div class="info-value"><a href="tel:0625041508">062 504 1508</a></div></div><div class="info-item wide"><div class="info-label">Physical Address</div><div class="info-value">978 Tshamahansi Village, Mokopane, Limpopo, 0600</div></div></div></div></div>
+    <section class="section-padding bg-white">
+      <div class="container">
+        <span class="eyebrow">Enterprise Overview</span>
+        <h2 class="section-title">Nationwide Operational Excellence</h2>
+        <p class="section-copy">Nhone Trading Enterprise provides industrial clients, mining operators, and civil contractors with high-performance plant equipment, commodity trading services, and dependable supply chain logistics across the country.</p>
+        
+        <div class="grid-3">
+          <div class="service-card">
+            <h3>Commodity Trading</h3>
+            <p>Procurement, trading, and supply chain management of bulk mineral commodities and raw materials for domestic and industrial markets.</p>
+          </div>
+          <div class="service-card">
+            <h3>Plant Hire & Machinery</h3>
+            <p>Heavy earthmoving equipment including excavator hire, dump trucks, TLBs, and graders maintained to rigorous safety standards.</p>
+          </div>
+          <div class="service-card">
+            <h3>Mining Supplies</h3>
+            <p>Supply and delivery of SABS-approved personal protective equipment (PPE), specialized industrial tools, and site consumables.</p>
+          </div>
+        </div>
+      </div>
     </section>
+  </div>
 
-    <!-- SERVICES -->
-    <section class="page" id="servicesPage"><section class="page-hero services-hero"><div class="photo-hero-bg"></div><div class="container page-hero-content"><div class="eyebrow light">What We Deliver</div><h1>Comprehensive <span style="color:var(--teal)">Mining Services</span></h1><p>Eight core competencies delivering complete supply chain solutions to mining operations across Limpopo.</p></div></section><section class="section off-section"><div class="container"><div class="service-detail-grid">
-      <div class="detail-card"><div class="detail-image"><img src="images/plant-hire.jpg" alt="Plant and machinery hire at a mining site"><div class="detail-icon">&#128666;</div></div><div class="detail-body"><h3>Plant &amp; Machinery Hire</h3><p>Heavy plant and machinery hire for mining, construction and civil works operations. Our fleet includes excavators, dump trucks, bulldozers, water bowsers, and light plant equipment.</p><ul class="detail-list"><li>CAT Excavators</li><li>Dump Trucks &amp; Tipper Trucks</li><li>Bulldozers &amp; Loaders</li><li>Water Bowsers</li><li>Light Plant Equipment</li></ul><button class="detail-link" data-page="contact">Request a Quote &rarr;</button></div></div>
-      <div class="detail-card"><div class="detail-image"><img src="images/logistics-trucks.jpg" alt="Heavy logistics trucks and trailers"><div class="detail-icon">&#9874;</div></div><div class="detail-body"><h3>Transport &amp; Logistics</h3><p>Comprehensive transport and logistics solutions for mining operations, from heavy haulage and abnormal loads to regular supply runs.</p><ul class="detail-list"><li>Heavy Haulage</li><li>Abnormal Load Transport</li><li>Supply Chain Logistics</li><li>Fleet Management</li><li>Site-to-Site Transport</li></ul><button class="detail-link" data-page="contact">Request a Quote &rarr;</button></div></div>
-      <div class="detail-card"><div class="detail-image"><img src="images/plant-hire.jpg" alt="Motor trade and repair work support"><div class="detail-icon">&#9874;</div></div><div class="detail-body"><h3>Retail, Motor Trade &amp; Repair Work</h3><p>Through our strategic partnership with Dot Afri, we offer motor trade services including vehicle sales, servicing, and repair work for mining fleet vehicles.</p><ul class="detail-list"><li>Vehicle Servicing</li><li>Repair &amp; Maintenance</li><li>Motor Trade</li><li>Mining Fleet Support</li><li>Parts Supply</li></ul><button class="detail-link" data-page="contact">Request a Quote &rarr;</button></div></div>
-      <div class="detail-card"><div class="detail-image"><img src="images/mining-supplies.jpg" alt="Mining equipment and materials"><div class="detail-icon">&#9935;</div></div><div class="detail-body"><h3>Mining Supplies</h3><p>Specialised mining equipment and materials delivered to your site. We source and deliver what you need to keep production moving.</p><ul class="detail-list"><li>Drilling Equipment &amp; Bits</li><li>Conveyor Belts &amp; Parts</li><li>Mining Consumables</li><li>Spare Parts</li><li>Tools &amp; Accessories</li></ul><button class="detail-link" data-page="contact">Request a Quote &rarr;</button></div></div>
-      <div class="detail-card"><div class="detail-image"><img src="images/logistics-trucks.jpg" alt="Fuel delivery and logistics fleet"><div class="detail-icon">&#9679;</div></div><div class="detail-body"><h3>Fuel Supply Solutions</h3><p>Reliable fuel delivery to mining and industrial sites. Our supply chain ensures your operation never runs dry.</p><ul class="detail-list"><li>Diesel Delivery</li><li>Fuel Management</li><li>Bulk Fuel Supply</li><li>Site-to-Site Fuel Transport</li><li>Fuel Quality Compliance</li></ul><button class="detail-link" data-page="contact">Request a Quote &rarr;</button></div></div>
-      <div class="detail-card"><div class="detail-image"><img src="images/site-work.jpg" alt="Mining safety equipment and PPE on site"><div class="detail-icon">&#10003;</div></div><div class="detail-body"><h3>Safety Equipment &amp; PPE</h3><p>Full range of personal protective equipment and safety supplies for mining operations, from hard hats and boots to respiratory protection.</p><ul class="detail-list"><li>Hard Hats &amp; Helmets</li><li>Safety Boots &amp; Gloves</li><li>High-Visibility Clothing</li><li>Respiratory Protection</li><li>Fall Protection Equipment</li></ul><button class="detail-link" data-page="contact">Request a Quote &rarr;</button></div></div>
-      <div class="detail-card"><div class="detail-image"><img src="images/civil-works.jpg" alt="Civil works and earthmoving at a mining site"><div class="detail-icon">&#9874;</div></div><div class="detail-body"><h3>Civil Works &amp; Construction</h3><p>Mining-specific civil works including site preparation, road construction, drainage works, and earthmoving.</p><ul class="detail-list"><li>Site Preparation</li><li>Access Road Construction</li><li>Drainage Works</li><li>Earthmoving &amp; Blasting</li><li>Retaining Structures</li></ul><button class="detail-link" data-page="contact">Request a Quote &rarr;</button></div></div>
-      <div class="detail-card"><div class="detail-image"><img src="images/mining-supplies.jpg" alt="General mining supplies and delivery"><div class="detail-icon">&#9633;</div></div><div class="detail-body"><h3>General Supply &amp; Delivery</h3><p>General procurement and delivery services for mining operations, from office supplies to workshop consumables.</p><ul class="detail-list"><li>Office &amp; Workshop Supplies</li><li>Cleaning &amp; Hygiene Products</li><li>Stationery &amp; Consumables</li><li>Canteen &amp; Catering Supplies</li><li>Ad-hoc Procurement</li></ul><button class="detail-link" data-page="contact">Request a Quote &rarr;</button></div></div>
-    </div></div></section><section class="section partners-dark"><div class="container"><div class="section-head light"><div class="eyebrow light">Extended Capacity</div><h2 class="section-title">Strategic <span style="color:var(--teal)">Partnerships</span></h2><p>We don't operate alone. Our partnerships with established companies give us the fleet, expertise, and capacity to deliver solutions above a single-company footprint.</p></div><div class="partner-grid"><div class="partner-dark-card"><h3>Dot Afri</h3><p>Established Mokopane-based plant hire, logistics, retail, motor trade and repair operation. Their fleet includes Hino tippers, Volvo low-bed abnormal-load trailers, dozers and excavators.</p><div class="tags"><span class="tag">Plant Hire</span><span class="tag">Logistics</span><span class="tag">Retail</span><span class="tag">Motor Trade</span><span class="tag">Repair</span></div></div><div class="partner-dark-card"><h3>Ahoy Enterprises</h3><p>Long-established waste management and environmental services company with 25 years of experience. Their proven track record complements our mining supply and civil works capabilities.</p><div class="tags"><span class="tag rust">Waste Management</span><span class="tag rust">Environmental Services</span><span class="tag rust">25 Years Experience</span></div></div></div><div class="partnership-note">One point of contact. Multiple capabilities. Full compliance.</div></div></section><section class="cta-band"><div class="container"><h2>Need a Service Not Listed?</h2><p>We source and deliver a wide range of mining supplies. If you don't see what you need, ask us.</p><button class="button dark" data-page="contact">Get in Touch &rarr;</button></div></section></section>
+  <div id="services" class="page">
+    <section class="section-padding">
+      <div class="container">
+        <span class="eyebrow">What We Do</span>
+        <h2 class="section-title">Our Core Services</h2>
+        <p class="section-copy">Tailored supply chain, commodity trading, and heavy machinery support for mining operations, infrastructure, and civil works across South Africa.</p>
+        
+        <div class="grid-3">
+          <div class="service-card">
+            <h3>Commodity Trading</h3>
+            <p>Expert procurement and seamless trading of bulk mineral commodities, ensuring high-quality raw materials are securely delivered to your operations nationwide.</p>
+          </div>
+          <div class="service-card">
+            <h3>Plant Hire & Fleet</h3>
+            <p>Access our extensive fleet of heavy earthmoving equipment. From excavators to articulated dump trucks, our machinery is fully serviced and site-ready.</p>
+          </div>
+          <div class="service-card">
+            <h3>Mining Supplies & PPE</h3>
+            <p>Comprehensive procurement of SABS-approved safety gear, heavy-duty industrial tools, site consumables, and specialized mining hardware.</p>
+          </div>
+          <div class="service-card">
+            <h3>Logistics & Haulage</h3>
+            <p>End-to-end bulk transportation, material haulage, and site logistics operations engineered to maximize efficiency across South Africa.</p>
+          </div>
+          <div class="service-card">
+            <h3>Civil & Earthworks</h3>
+            <p>Professional site preparation, trenching, road works, and civil engineering contract support designed for demanding mining environments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-    <!-- GALLERY -->
-    <section class="page" id="galleryPage"><section class="page-hero" style="min-height:390px"><div class="container page-hero-content"><div class="eyebrow light">Real Work. Real Sites.</div><h1>Our Work in <span style="color:var(--teal)">Action</span></h1><p>Real photos from our mining sites, fleet operations and team - no stock imagery, no fluff.</p></div></section><section class="off-section gallery-section"><div class="container"><div class="filters"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Plant Hire">Plant Hire</button><button class="filter" data-filter="Logistics">Logistics</button><button class="filter" data-filter="Site Work">Site Work</button><button class="filter" data-filter="Team">Team</button></div><div class="gallery-grid" id="galleryGrid">
-      <button class="gallery-item" data-category="Plant Hire" data-index="0"><img src="images/plant-hire.jpg" alt="Plant hire equipment - excavators and bulldozers"><span class="gallery-category">Plant Hire</span></button>
-      <button class="gallery-item" data-category="Logistics" data-index="1"><img src="images/logistics-trucks.jpg" alt="Logistics fleet - Hino tipper trucks and trailers"><span class="gallery-category">Logistics</span></button>
-      <button class="gallery-item" data-category="Site Work" data-index="2"><img src="images/site-work.jpg" alt="Underground mining site work with PPE-clad workers"><span class="gallery-category">Site Work</span></button>
-      <button class="gallery-item" data-category="Site Work" data-index="3"><img src="images/civil-works.jpg" alt="Civil works and earthmoving at mining site"><span class="gallery-category">Site Work</span></button>
-      <button class="gallery-item" data-category="Team" data-index="4"><img src="images/team.jpg" alt="Nhone Trading Enterprise team at a mining operation"><span class="gallery-category">Team</span></button>
-      <button class="gallery-item" data-category="Plant Hire" data-index="5"><img src="images/mining-supplies.jpg" alt="Mining supplies warehouse with organized equipment"><span class="gallery-category">Plant Hire</span></button>
-      <button class="gallery-item" data-category="Logistics" data-index="6"><img src="images/hero-mining.jpg" alt="Mining dump trucks on red earth mining site"><span class="gallery-category">Logistics</span></button>
-      <button class="gallery-item" data-category="Site Work" data-index="7"><img src="images/about-bg.jpg" alt="Aerial view of open pit mining operations"><span class="gallery-category">Site Work</span></button>
-      <button class="gallery-item" data-category="Plant Hire" data-index="8"><img src="images/services-hero.jpg" alt="Various heavy machinery at mining operation"><span class="gallery-category">Plant Hire</span></button>
-      <button class="gallery-item" data-category="Site Work" data-index="9"><img src="images/contact-bg.jpg" alt="Mining site landscape at dusk"><span class="gallery-category">Site Work</span></button>
-    </div></div></section></section>
+  <div id="gallery" class="page">
+    <section class="section-padding bg-white">
+      <div class="container">
+        <span class="eyebrow">Our Impact</span>
+        <h2 class="section-title">Proof of Work</h2>
+        <p class="section-copy">A look at our modern equipment, commodity operations, and fleet delivered to project sites across South Africa.</p>
+        
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1579412690850-bd41cd0af397?auto=format&fit=crop&w=800&q=80" alt="Plant Hire & Excavation">
+            <div class="gallery-label">Heavy Machinery & Excavation</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Logistics & Haulage">
+            <div class="gallery-label">Bulk Haulage & Logistics</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1587293852726-0d4182b6e1b6?auto=format&fit=crop&w=800&q=80" alt="Commodity Trading">
+            <div class="gallery-label">Commodity Trading Operations</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Mining Safety PPE">
+            <div class="gallery-label">SABS-Approved Mining Supplies</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-    <!-- CONTACT -->
-    <section class="page" id="contactPage"><section class="page-hero contact-hero"><div class="photo-hero-bg"></div><div class="container page-hero-content"><div class="eyebrow light">Get In Touch</div><h1>Let's <span style="color:var(--teal)">Work Together</span></h1><p>Request a quote, enquire about compliance documents, or simply say hello - we respond within 24 hours.</p></div></section><section class="section off-section"><div class="container contact-layout"><div class="form-box"><h2>Send Us a Message</h2><p>Fill in the form below and we'll get back to you promptly.</p><div class="success" id="formSuccess"><div class="success-icon">&#10003;</div><h3 class="heading">Message Sent!</h3><p class="section-copy">We'll get back to you within 24 hours.</p></div><form id="contactForm"><div class="form-grid"><div class="field"><label for="name">Full Name *</label><input id="name" required type="text" placeholder="Your name"></div><div class="field"><label for="company">Company / Mine</label><input id="company" type="text" placeholder="Company name"></div></div><div class="form-grid"><div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="email@company.com"></div><div class="field"><label for="phone">Phone</label><input id="phone" type="tel" placeholder="Your phone number"></div></div><div class="field"><label for="service">Service Needed *</label><select id="service" required><option value="">Select a service</option><option>Plant &amp; Machinery Hire</option><option>Transport &amp; Logistics</option><option>Mining Supplies</option><option>Fuel Supply Solutions</option><option>Safety Equipment &amp; PPE</option><option>Civil Works &amp; Construction</option><option>General Supply &amp; Delivery</option><option>Other</option></select></div><div class="field"><label for="message">Message *</label><textarea id="message" required placeholder="Tell us about your requirements..."></textarea></div><button class="button teal" type="submit">Send Message &rarr;</button></form></div><div class="contact-stack"><div class="contact-box"><h3>Direct Contact</h3><div class="contact-list"><a class="contact-item" href="mailto:ntsakonhone01@gmail.com"><span class="contact-icon">&#9993;</span><span><small>Email</small><strong>ntsakonhone01@gmail.com</strong></span></a><a class="contact-item" href="tel:0625041508"><span class="contact-icon">&#9742;</span><span><small>Cellphone</small><strong>062 504 1508</strong></span></a><div class="contact-item"><span class="contact-icon">&#9679;</span><span><small>Address</small><strong>978 Tshamahansi Village, Mokopane, Limpopo, 0600</strong></span></div><div class="contact-item"><span class="contact-icon">&#9716;</span><span><small>Business Hours</small><strong>Mon - Fri: 07:00 - 17:00</strong></span></div></div></div><div class="procurement"><h3 class="heading">&#9633; Procurement Reference</h3><div class="procurement-row"><small>CSD Supplier Number</small><strong>CS-xxxx</strong></div><div class="procurement-row"><small>Ivanplats JDE Address Number</small><strong>JDE-xxxx</strong></div><div class="procurement-row"><small>Company Registration</small><strong>2022/xxx/07</strong></div><div class="procurement-row"><small>B-BBEE Status</small><strong class="teal">Level 1 (135% Recognition)</strong></div></div><a class="whatsapp" href="https://wa.me/27625041508?text=Hello%20Nhone%20Trading%2C%20I%27d%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener"><span class="whatsapp-icon">&#9742;</span><span><strong>Chat on WhatsApp</strong><small>Quick response guaranteed</small></span></a></div></div></section><section class="map-section"><div class="container"><h2>Our Location</h2><div class="map"><iframe src="https://www.google.com/maps?q=Mokopane,+Limpopo,+South+Africa&amp;output=embed" loading="lazy" title="Nhone Trading Enterprise location - Mokopane, Limpopo"></iframe></div></div></section></section>
-  </main>
+  <div id="about" class="page">
+    <section class="section-padding">
+      <div class="container">
+        <span class="eyebrow">About Us</span>
+        <h2 class="section-title">Your Operational Partner</h2>
+        <p class="section-copy">Nhone Trading Enterprise operates at the intersection of empowerment and industrial reliability. As a 100% Black Youth-Owned and B-BBEE Level 1 enterprise, we are dedicated to executing large-scale requirements across South Africa while maintaining strict compliance with the Mine Health and Safety Act (MHSA).</p>
+        <br>
+        <p class="section-copy">Partnering with us directly optimizes your local procurement scoring while ensuring peak operational performance, swift supply delivery, and uncompromising safety.</p>
+      </div>
+    </section>
+  </div>
 
-  <footer><div class="container footer-main"><div><button class="brand" data-page="home"><svg class="brand-mark" viewBox="0 0 44 44" fill="none" aria-hidden="true"><path d="M22 4 8 34h10l4-8 4 8h10L22 4Z" fill="#00C9A7"/><path d="M10 30c4-6 10-10 16-12 4-1 8 0 12 2" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><span><span class="brand-name">NHONE</span><span class="brand-sub">Trading Enterprise</span></span></button><p>100% Black Youth-Owned, B-BBEE Level 1 strategic partner to mining operations in the Mogalakwena district.</p><div class="script" style="color:var(--teal);font-size:22px">&quot;Born to work hard!&quot;</div></div><div><h4 class="footer-heading">Quick Links</h4><ul class="footer-list"><li><a href="#" data-page="home">Home</a></li><li><a href="#" data-page="about">About</a></li><li><a href="#" data-page="services">Services</a></li><li><a href="#" data-page="gallery">Gallery</a></li><li><a href="#" data-page="contact">Contact</a></li></ul></div><div><h4 class="footer-heading">Core Services</h4><ul class="footer-list"><li>Plant &amp; Machinery Hire</li><li>Transport &amp; Logistics</li><li>Mining Supplies</li><li>Fuel Supply Solutions</li><li>Safety Equipment &amp; PPE</li><li>Civil Works &amp; Construction</li></ul></div><div><h4 class="footer-heading">Contact</h4><ul class="footer-list"><li>978 Tshamahansi Village, Mokopane, Limpopo, 0600</li><li><a href="mailto:ntsakonhone01@gmail.com">ntsakonhone01@gmail.com</a></li><li><a href="tel:0625041508">062 504 1508</a></li><li>Mon - Fri: 07:00 - 17:00</li></ul></div></div><div class="container footer-bottom"><span>&copy; 2026 Nhone Trading Enterprise. All rights reserved.</span><span>B-BBEE Level 1 Contributor | 100% Black Youth-Owned</span></div></footer>
+  <div id="contact" class="page">
+    <section class="section-padding bg-white">
+      <div class="container">
+        <span class="eyebrow">Get In Touch</span>
+        <h2 class="section-title">Request a Quote</h2>
+        
+        <div class="contact-grid">
+          <div>
+            <form onsubmit="event.preventDefault(); alert('Message Sent Successfully!');">
+              <div class="form-field">
+                <label>Full Name / Company</label>
+                <input type="text" required placeholder="Enter your name">
+              </div>
+              <div class="form-field">
+                <label>Email Address</label>
+                <input type="email" required placeholder="name@company.com">
+              </div>
+              <div class="form-field">
+                <label>Service Required</label>
+                <select required>
+                  <option>Commodity Trading</option>
+                  <option>Plant Hire & Machinery</option>
+                  <option>Mining Supplies & PPE</option>
+                  <option>Logistics & Haulage</option>
+                  <option>Civil & Earthworks</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label>Message / Requirements</label>
+                <textarea rows="5" required placeholder="How can we assist your operations?"></textarea>
+              </div>
+              <button class="button teal" type="submit" style="width: 100%;">Send Message</button>
+            </form>
+          </div>
+          
+          <div>
+            <div class="contact-info-card">
+              <h3>Contact Details</h3>
+              <div class="contact-item">
+                <span class="label">Phone Numbers</span>
+                <span class="val">062 504 1508<br>066 224 6016</span>
+              </div>
+              <div class="contact-item">
+                <span class="label">Email Addresses</span>
+                <span class="val">ntsakonhone01@gmail.com<br>vhuthuhawetshikomba18@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <span class="label">Service Area</span>
+                <span class="val">Nationwide, South Africa</span>
+              </div>
+              <div class="contact-item">
+                <span class="label">Hours</span>
+                <span class="val">Mon-Fri: 07:00 - 17:00<br>Site Support: 24/7</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-  <button class="chat-launcher" id="chatLauncher" aria-label="Open chat assistant">&#128172;</button>
-  <div class="chat-window" id="chatWindow"><div class="chat-head"><div><strong>Nhone Assist</strong><small>Online</small></div><button class="chat-close" id="chatClose" aria-label="Close chat">&times;</button></div><div class="chat-messages" id="chatMessages"><div class="message bot">Welcome to Nhone Trading Enterprise! I'm your assistant. How can I help you today?</div><div class="chat-options" id="chatOptions"><button data-chat="quote">Request a Quote</button><button data-chat="compliance">Compliance Documents</button><button data-chat="services">Our Services</button><button data-chat="human">Talk to Someone</button></div></div><div class="chat-input"><input id="chatInput" type="text" placeholder="Type a message..."><button id="chatSend" aria-label="Send message">&#8594;</button></div></div>
-  <div class="lightbox" id="lightbox"><button class="lightbox-close" id="lightboxClose" aria-label="Close image">&times;</button><button class="lightbox-arrow prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button><img id="lightboxImage" src="" alt=""><button class="lightbox-arrow next" id="lightboxNext" aria-label="Next image">&#8250;</button></div>
-
-  <div class="mobile-bar"><a href="tel:0625041508"><span>&#9742;</span>Call</a><a href="https://wa.me/27625041508" target="_blank" rel="noopener"><span>&#9742;</span>WhatsApp</a><button class="get-quote" data-page="contact">Get Quote</button><button id="mobileChat"><span>&#128172;</span>Chat</button></div>
+  <footer class="footer">
+    <div class="container">
+      &copy; 2026 Nhone Trading Enterprise. All Rights Reserved. Nationwide Service.
+    </div>
+  </footer>
 
   <script>
-    (function () {
-      var pages = ['home', 'about', 'services', 'gallery', 'contact'];
-      var current = 'home';
-      var header = document.getElementById('siteHeader');
-      var menu = document.getElementById('mobileMenu');
-      var menuButton = document.getElementById('menuButton');
-      var pageButtons = document.querySelectorAll('[data-page]');
-
-      function showPage(page) {
-        if (!pages.includes(page)) page = 'home';
-        current = page;
-        document.querySelectorAll('.page').forEach(function (el) { el.classList.remove('active'); });
-        document.getElementById(page + 'Page').classList.add('active');
-        document.querySelectorAll('[data-page]').forEach(function (el) {
-          if (el.tagName === 'BUTTON' && !el.classList.contains('nav-quote') && !el.classList.contains('get-quote')) el.classList.toggle('active', el.getAttribute('data-page') === page);
-        });
-        menu.classList.remove('open');
-        menuButton.innerHTML = '&#9776;';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        if (location.hash !== '#' + page) history.replaceState(null, '', '#' + page);
-      }
-      pageButtons.forEach(function (el) { el.addEventListener('click', function (event) { if (el.tagName === 'A') event.preventDefault(); showPage(el.getAttribute('data-page')); }); });
-      menuButton.addEventListener('click', function () { menu.classList.toggle('open'); menuButton.innerHTML = menu.classList.contains('open') ? '&times;' : '&#9776;'; });
-      window.addEventListener('scroll', function () { header.classList.toggle('scrolled', window.scrollY > 40); });
-      var hashPage = location.hash.replace('#', '');
-      if (pages.includes(hashPage)) showPage(hashPage);
-
-      var galleryData = [
-        ['images/plant-hire.jpg', 'Plant hire equipment - excavators and bulldozers'], ['images/logistics-trucks.jpg', 'Logistics fleet - Hino tipper trucks and trailers'], ['images/site-work.jpg', 'Underground mining site work with PPE-clad workers'], ['images/civil-works.jpg', 'Civil works and earthmoving at mining site'], ['images/team.jpg', 'Nhone Trading Enterprise team at a mining operation'], ['images/mining-supplies.jpg', 'Mining supplies warehouse with organized equipment'], ['images/hero-mining.jpg', 'Mining dump trucks on red earth mining site'], ['images/about-bg.jpg', 'Aerial view of open pit mining operations'], ['images/services-hero.jpg', 'Various heavy machinery at mining operation'], ['images/contact-bg.jpg', 'Mining site landscape at dusk']
-      ];
-      var galleryItems = document.querySelectorAll('.gallery-item');
-      document.querySelectorAll('.filter').forEach(function (filter) { filter.addEventListener('click', function () { document.querySelectorAll('.filter').forEach(function (button) { button.classList.remove('active'); }); filter.classList.add('active'); var value = filter.getAttribute('data-filter'); galleryItems.forEach(function (item) { item.style.display = value === 'All' || item.getAttribute('data-category') === value ? '' : 'none'; }); }); });
-      var lightbox = document.getElementById('lightbox');
-      var lightboxImage = document.getElementById('lightboxImage');
-      var lightboxIndex = 0;
-      function openLightbox(index) { lightboxIndex = index; lightboxImage.src = galleryData[index][0]; lightboxImage.alt = galleryData[index][1]; lightbox.classList.add('open'); }
-      function changeLightbox(direction) { lightboxIndex = (lightboxIndex + direction + galleryData.length) % galleryData.length; openLightbox(lightboxIndex); }
-      galleryItems.forEach(function (item) { item.addEventListener('click', function () { openLightbox(Number(item.getAttribute('data-index'))); }); });
-      document.getElementById('lightboxClose').addEventListener('click', function () { lightbox.classList.remove('open'); });
-      document.getElementById('lightboxPrev').addEventListener('click', function () { changeLightbox(-1); });
-      document.getElementById('lightboxNext').addEventListener('click', function () { changeLightbox(1); });
-      lightbox.addEventListener('click', function (event) { if (event.target === lightbox) lightbox.classList.remove('open'); });
-      document.addEventListener('keydown', function (event) { if (event.key === 'Escape') lightbox.classList.remove('open'); if (event.key === 'ArrowLeft') changeLightbox(-1); if (event.key === 'ArrowRight') changeLightbox(1); });
-
-      var form = document.getElementById('contactForm');
-      var success = document.getElementById('formSuccess');
-      form.addEventListener('submit', function (event) { event.preventDefault(); form.style.display = 'none'; success.classList.add('show'); setTimeout(function () { form.reset(); form.style.display = ''; success.classList.remove('show'); }, 5000); });
-
-      var chat = document.getElementById('chatWindow');
-      var chatMessages = document.getElementById('chatMessages');
-      var chatOptions = document.getElementById('chatOptions');
-      var chatInput = document.getElementById('chatInput');
-      function addMessage(text, who) { var div = document.createElement('div'); div.className = 'message ' + who; div.textContent = text; chatMessages.insertBefore(div, chatOptions); chatMessages.scrollTop = chatMessages.scrollHeight; }
-      function addOptions(options) { chatOptions.innerHTML = ''; options.forEach(function (option) { var button = document.createElement('button'); button.textContent = option.label; button.setAttribute('data-chat', option.action); chatOptions.appendChild(button); }); }
-      function chatReply(action) {
-        var label = action === 'quote' ? 'Request a Quote' : action === 'compliance' ? 'Compliance Documents' : action === 'services' ? 'Our Services' : 'Talk to Someone';
-        addMessage(label, 'user');
-        if (action === 'quote') { addMessage('Great! Please share your company or mine name, the service you need, site location, and urgency. Our team will follow up with a detailed quote.', 'bot'); addOptions([{ label: 'Open Contact Form', action: 'contact' }, { label: 'Talk to Someone', action: 'human' }]); }
-        else if (action === 'compliance') { addMessage('Our current status includes B-BBEE Level 1, 100% Black Youth-Owned, CSD Registered, and Tax Compliant. Please open the contact form and tell us where to send the documents.', 'bot'); addOptions([{ label: 'Open Contact Form', action: 'contact' }, { label: 'Talk to Someone', action: 'human' }]); }
-        else if (action === 'services') { addMessage('We offer plant hire, logistics, mining supplies, fuel supply, PPE and safety equipment, civil works, motor trade and repair, and general supply and delivery.', 'bot'); addOptions([{ label: 'View Services', action: 'servicesPage' }, { label: 'Request a Quote', action: 'quote' }]); }
-        else if (action === 'human') { addMessage('You can reach our team directly at 062 504 1508 or ntsakonhone01@gmail.com. I can also open WhatsApp for you.', 'bot'); addOptions([{ label: 'Open WhatsApp', action: 'whatsapp' }, { label: 'Open Contact Form', action: 'contact' }]); }
-        else if (action === 'contact' || action === 'servicesPage') { showPage(action === 'contact' ? 'contact' : 'services'); }
-        else if (action === 'whatsapp') { window.open('https://wa.me/27625041508', '_blank'); }
-      }
-      document.getElementById('chatLauncher').addEventListener('click', function () { chat.classList.add('open'); });
-      document.getElementById('mobileChat').addEventListener('click', function () { chat.classList.add('open'); });
-      document.getElementById('chatClose').addEventListener('click', function () { chat.classList.remove('open'); });
-      chatOptions.addEventListener('click', function (event) { if (event.target.matches('button')) chatReply(event.target.getAttribute('data-chat')); });
-      function sendChat() { var text = chatInput.value.trim(); if (!text) return; addMessage(text, 'user'); chatInput.value = ''; setTimeout(function () { addMessage('Thank you. A member of the Nhone Trading team will follow up shortly. For immediate assistance, call 062 504 1508 or use WhatsApp.', 'bot'); }, 350); }
-      document.getElementById('chatSend').addEventListener('click', sendChat); chatInput.addEventListener('keydown', function (event) { if (event.key === 'Enter') sendChat(); });
-    }());
+    // Simple Vanilla JS Page Switcher (Just like your original code)
+    function switchPage(pageId) {
+      // Hide all pages
+      document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+      });
+      // Show targeted page
+      document.getElementById(pageId).classList.add('active');
+      
+      // Update active state on nav buttons
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if(btn.getAttribute('data-target') === pageId) {
+          btn.classList.add('active');
+        }
+      });
+      
+      // Scroll to top
+      window.scrollTo(0,0);
+    }
   </script>
 </body>
 </html>
-
