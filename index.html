@@ -1,867 +1,388 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nhone Trading Enterprise — Mining Supplies, Plant Hire, Commodity Trading & Logistics</title>
-  <meta name="description" content="Nhone Trading Enterprise is a 100% Black Youth-Owned, B-BBEE Level 1 mining supply, commodity trading, plant hire, logistics and civil works company operating nationwide across South Africa." />
-  <meta name="keywords" content="plant hire South Africa, mining supplies, commodity trading, B-BBEE Level 1 supplier, logistics South Africa, civil works mining, dump truck hire, excavator hire, mining PPE supplies" />
-  <meta name="author" content="Nhone Trading Enterprise" />
-  <meta property="og:title" content="Nhone Trading Enterprise — Mining Supplies, Plant Hire, Commodity Trading & Logistics" />
-  <meta property="og:description" content="100% Black Youth-Owned, B-BBEE Level 1 mining supply, commodity trading, plant hire, logistics and civil works company operating nationwide." />
-  <meta property="og:type" content="website" />
-  <meta name="robots" content="index, follow" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <style>
-    :root {
-      --primary: #f97316;       /* Industrial Orange */
-      --primary-hover: #ea580c;
-      --dark-navy: #0f172a;     /* Main Dark Slate Background */
-      --card-bg: #1e293b;       /* Card Slate */
-      --text-light: #f8fafc;
-      --text-muted: #94a3b8;
-      --accent-gold: #eab308;
-      --white: #ffffff;
-      --border: #334155;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--dark-navy);
-      color: var(--text-light);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3, h4, .brand-logo {
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    /* --- Navigation --- */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.2rem 2rem;
-    }
-
-    .brand-logo {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: var(--white);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .brand-logo span {
-      color: var(--primary);
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--text-light);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-
-    .btn-nav {
-      background: var(--primary);
-      color: var(--white) !important;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
-      font-weight: 600 !important;
-      transition: background 0.3s !important;
-    }
-
-    .btn-nav:hover {
-      background: var(--primary-hover) !important;
-    }
-
-    .mobile-toggle {
-      display: none;
-      font-size: 1.5rem;
-      color: var(--white);
-      cursor: pointer;
-    }
-
-    /* --- Hero Section --- */
-    .hero {
-      position: relative;
-      padding: 180px 2rem 120px;
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.8)), 
-                  url('https://images.unsplash.com/photo-1578507065211-1c4e99a5fd24?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-    }
-
-    .hero-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    .badge-group {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 1.5rem;
-    }
-
-    .badge {
-      background: rgba(249, 115, 22, 0.15);
-      border: 1px solid var(--primary);
-      color: var(--primary);
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .badge-gold {
-      background: rgba(234, 179, 8, 0.15);
-      border-color: var(--accent-gold);
-      color: var(--accent-gold);
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 900;
-      line-height: 1.15;
-      margin-bottom: 1.5rem;
-      max-width: 900px;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      color: var(--text-muted);
-      max-width: 700px;
-      margin-bottom: 2.5rem;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: var(--white);
-      padding: 0.9rem 2rem;
-      border-radius: 6px;
-      font-weight: 700;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: background 0.3s;
-    }
-
-    .btn-primary:hover {
-      background: var(--primary-hover);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--text-light);
-      padding: 0.9rem 2rem;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: border-color 0.3s, background 0.3s;
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--primary);
-      background: rgba(249, 115, 22, 0.05);
-    }
-
-    /* --- Stats Bar --- */
-    .stats-bar {
-      background: var(--card-bg);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 2.5rem 2rem;
-    }
-
-    .stats-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      text-align: center;
-    }
-
-    .stat-item h3 {
-      font-size: 2.2rem;
-      color: var(--primary);
-      font-weight: 800;
-    }
-
-    .stat-item p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 4px;
-    }
-
-    /* --- Section Shared Styles --- */
-    section {
-      padding: 100px 2rem;
-    }
-
-    .section-title {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 60px;
-    }
-
-    .section-title h2 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-
-    .section-title p {
-      color: var(--text-muted);
-      font-size: 1.1rem;
-    }
-
-    /* --- Services Section --- */
-    .services-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 2rem;
-    }
-
-    .service-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2.5rem 2rem;
-      transition: transform 0.3s, border-color 0.3s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--primary);
-    }
-
-    .service-icon {
-      width: 60px;
-      height: 60px;
-      background: rgba(249, 115, 22, 0.1);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      color: var(--primary);
-      margin-bottom: 1.5rem;
-    }
-
-    .service-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-    }
-
-    .service-card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    /* --- Gallery / Proof of Work Showcase --- */
-    .equipment-section {
-      background: #0b1120;
-    }
-
-    .equipment-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-    }
-
-    .equip-card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-    }
-
-    .equip-img {
-      height: 240px;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    .equip-body {
-      padding: 1.5rem;
-    }
-
-    .equip-body h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .equip-body p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    /* --- About / B-BBEE Section --- */
-    .about-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .about-text h2 {
-      font-size: 2.3rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .about-text p {
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-      font-size: 1.05rem;
-    }
-
-    .feature-list {
-      list-style: none;
-      margin-top: 1.5rem;
-    }
-
-    .feature-list li {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    .feature-list i {
-      color: var(--primary);
-      font-size: 1.2rem;
-    }
-
-    .about-box {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 3rem;
-      position: relative;
-    }
-
-    .about-box::before {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      background: linear-gradient(45deg, var(--primary), transparent);
-      border-radius: 18px;
-      z-index: -1;
-    }
-
-    /* --- Contact Section --- */
-    .contact-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 3rem;
-    }
-
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .info-item {
-      display: flex;
-      gap: 1.2rem;
-      align-items: flex-start;
-    }
-
-    .info-icon {
-      width: 50px;
-      height: 50px;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--primary);
-      font-size: 1.3rem;
-      flex-shrink: 0;
-    }
-
-    .info-text h4 {
-      font-size: 1.1rem;
-      margin-bottom: 4px;
-    }
-
-    .info-text p, .info-text a {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      text-decoration: none;
-    }
-
-    .info-text a:hover {
-      color: var(--primary);
-    }
-
-    .contact-form {
-      background: var(--card-bg);
-      padding: 2.5rem;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-    }
-
-    .form-group {
-      margin-bottom: 1.2rem;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 0.8rem 1rem;
-      background: var(--dark-navy);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      color: var(--text-light);
-      font-family: inherit;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      outline: none;
-      border-color: var(--primary);
-    }
-
-    /* --- Footer --- */
-    footer {
-      background: #080d1a;
-      border-top: 1px solid var(--border);
-      padding: 60px 2rem 30px;
-    }
-
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 3rem;
-      margin-bottom: 40px;
-    }
-
-    .footer-col h4 {
-      margin-bottom: 1.2rem;
-      font-size: 1.1rem;
-      color: var(--white);
-    }
-
-    .footer-col p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    .footer-links {
-      list-style: none;
-    }
-
-    .footer-links li {
-      margin-bottom: 8px;
-    }
-
-    .footer-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.3s;
-    }
-
-    .footer-links a:hover {
-      color: var(--primary);
-    }
-
-    .copyright {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding-top: 30px;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-
-    /* --- Mobile Responsive --- */
-    @media (max-width: 900px) {
-      .hero h1 {
-        font-size: 2.5rem;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhone Trading Enterprise — Mining Supplies, Plant Hire & Logistics | Mokopane, Limpopo</title>
+    <link rel="icon" href="/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+    <link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://019fb1f0-b57b-7cbf-98d7-37a5121a3627.arena.site/" />
+    <meta property="og:title" content="Nhone Trading Enterprise — Mining Supplies, Plant Hire & Logistics | Mokopane, Limpopo" />
+    <meta
+      property="og:description"
+      content="Check out what I built in Arena's Code Arena - Content is user-generated and unverified"
+    />
+    <meta property="og:image" content="https://screenshot-taker-prod.weichiang.workers.dev/message/019fb1f0-b57b-7cbf-98d7-37a5121a3627/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://019fb1f0-b57b-7cbf-98d7-37a5121a3627.arena.site/" />
+    <meta property="twitter:title" content="Nhone Trading Enterprise — Mining Supplies, Plant Hire & Logistics | Mokopane, Limpopo" />
+    <meta
+      property="twitter:description"
+      content="Check out what I built in Arena's Code Arena - Content is user-generated and unverified"
+    />
+    <meta property="twitter:image" content="https://screenshot-taker-prod.weichiang.workers.dev/message/019fb1f0-b57b-7cbf-98d7-37a5121a3627/og-image.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script>
+      const REPORT_SURVEY_ID = "019a46ef-f7dd-0000-58be-14fbb8b91d15";
+      const MESSAGE_ID = "019fb1f0-b57b-7cbf-98d7-37a5121a3627";
+      const EVALUATION_SESSION_ID = "019fafaf-46cb-7605-9c0f-e09e8275b979";
+      const getStorageKey = (prefix) => `${prefix}_${MESSAGE_ID}`;
+      const hasStorageKey = (prefix) => !!localStorage.getItem(getStorageKey(prefix));
+
+      // snippet below comes from posthog's documentation for running in html pages
+      // prettier-ignore
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+
+      const POSTHOG_API_KEY = "phc_LG7IJbVJqBsk584rbcKca0D5lV2vHguiijDrVji7yDM";
+      if (POSTHOG_API_KEY) {
+        posthog.init(POSTHOG_API_KEY, {
+          api_host: "/ph",
+          ui_host: "https://us.posthog.com",
+          person_profiles: "identified_only",
+          autocapture: false,
+          disable_session_recording: true,
+          before_send: (event) => {
+            if (event.event === "survey sent") {
+              // On the first survey answer sent, also send the report event
+              if (!hasStorageKey("code_reported")) {
+                localStorage.setItem(getStorageKey("code_reported"), "true");
+                posthog.capture?.("code_preview_banner_report");
+              }
+              // When the survey is completed, hide the report button
+              if (event.properties?.$survey_completed === true) {
+                localStorage.setItem(getStorageKey("survey_completed"), "true");
+                document.querySelector(".report-content-btn").style.display = "none";
+              }
+            }
+            return event;
+          },
+        });
+        posthog.register({ message_id: MESSAGE_ID, evaluation_session_id: EVALUATION_SESSION_ID });
       }
+    </script>
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-      .about-container,
-      .contact-container {
-        grid-template-columns: 1fr;
-      }
+a {
+  text-decoration: none;
+}
 
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--dark-navy);
-        flex-direction: column;
-        padding: 2rem;
-        border-bottom: 1px solid var(--border);
-      }
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
 
-      .nav-links.active {
-        display: flex;
-      }
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+}
 
-      .mobile-toggle {
-        display: block;
-      }
-    }
-  </style>
-</head>
-<body>
+/* Banner styles */
+.floating-banner {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  will-change: transform, opacity;
+}
 
-  <header>
-    <div class="nav-container">
-      <a href="#" class="brand-logo">
-        <i class="fa-solid fa-truck-ramp-box"></i> NHONE <span>TRADING</span>
+@keyframes slideIn {
+  from {
+    transform: translateY(100px) translateZ(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) translateZ(0);
+    opacity: 1;
+  }
+}
+
+.floating-banner.dismissed {
+  animation: slideOut 0.3s ease-out forwards;
+}
+
+@keyframes slideOut {
+  to {
+    transform: translateY(100px) translateZ(0);
+    opacity: 0;
+  }
+}
+
+.banner-padding {
+  padding: 10px 16px;
+}
+
+.banner-link-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.banner-logo {
+  display: flex;
+  align-items: center;
+  color: #2d2d2d;
+  flex-shrink: 0;
+}
+
+.banner-logo svg {
+  height: 28px;
+  width: auto;
+}
+
+.banner-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.banner-text {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.banner-upper-text {
+  color: #151617;
+  font-size: 14px;
+}
+
+.banner-lower-text {
+  color: #878c9f;
+  font-size: 10px;
+}
+
+.banner-action-container {
+  border-left: 1px solid rgba(45, 47, 53, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+
+.action-btn:hover {
+  color: #2d2d2d;
+}
+
+/* Iframe container styles */
+.iframe-container {
+  flex: 1;
+  position: relative;
+  background: white;
+  overflow: hidden;
+  min-height: 0;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+    </style>
+  </head>
+  <body data-ryu-obtrusive-scrollbars="false">
+    <svg style="display: none">
+      <symbol
+        id="icon-flag"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528"
+        />
+      </symbol>
+      <symbol
+        id="icon-close"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </symbol>
+    </svg>
+
+    <div class="floating-banner" id="floating-banner">
+      <a
+        href="https://arena.ai/code"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="banner-link-wrapper banner-padding"
+        onclick="onCodePreviewBannerCTAClicked(event)"
+      >
+        <div class="banner-logo"><svg
+  width="167"
+  height="124"
+  viewBox="0 0 167 124"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M57.5364 53.3142C52.1508 53.3142 47.7887 57.6763 47.7887 63.0618V123.88H53.9963V63.0618C53.9963 61.0989 55.5902 59.505 57.5531 59.505C59.5161 59.505 61.11 61.0989 61.11 63.0618V123.88H67.3176V63.0618C67.3176 57.6763 62.9555 53.3142 57.5699 53.3142H57.5364Z"
+    fill="currentColor"
+  />
+  <path
+    d="M109.121 53.3142C103.735 53.3142 99.3734 57.6763 99.3734 63.0618V123.88H105.581V63.0618C105.581 61.0989 107.175 59.505 109.138 59.505C111.101 59.505 112.695 61.0989 112.695 63.0618V123.88H118.902V63.0618C118.902 57.6763 114.54 53.3142 109.155 53.3142H109.121Z"
+    fill="currentColor"
+  />
+  <path
+    d="M83.3286 53.3142C77.9431 53.3142 73.5809 57.6763 73.5809 63.0618V123.88H79.7886V63.0618C79.7886 61.0989 81.3824 59.505 83.3454 59.505C85.3083 59.505 86.9022 61.0989 86.9022 63.0618V123.88H93.1098V63.0618C93.1098 57.6763 88.7477 53.3142 83.3622 53.3142H83.3286Z"
+    fill="currentColor"
+  />
+  <path
+    d="M143.782 28.035L148.077 20.5691H158.06L166.667 0H0L8.60681 20.5691H18.5894L22.8676 28.035C14.5292 30.8872 7.66727 38.135 7.66727 49.0571C7.66727 59.9792 15.5526 69.2235 27.3639 69.2235C29.9477 69.2235 32.3468 68.6867 34.4776 67.7471V123.901H40.6684V62.7978C42.6146 60.1637 43.7555 56.8754 43.8393 53.1508C43.8393 53.1005 43.8561 53.0333 43.8561 52.9662C43.8561 52.9159 43.8393 52.8823 43.8393 52.832C43.8393 52.7985 43.8561 52.7649 43.8561 52.7314C43.8561 52.681 43.8393 52.6307 43.8393 52.5636C43.7722 50.047 43.1011 47.6981 41.9267 45.7016H124.74C123.566 47.6981 122.894 50.047 122.827 52.5636C122.827 52.6307 122.811 52.681 122.811 52.7314V52.9662C122.811 52.9662 122.827 53.1005 122.827 53.1508C122.911 56.8754 124.052 60.1637 125.998 62.7978V123.901H132.189V67.7471C134.32 68.6867 136.702 69.2235 139.303 69.2235C151.097 69.2235 158.999 59.5765 158.999 49.0571C158.999 38.5377 152.121 30.8872 143.782 28.035ZM12.734 14.3615L9.31146 6.20764H157.355L153.933 14.3615H12.734ZM140.93 20.5691L137.491 26.5586H29.1759L25.7365 20.5691H140.93ZM139.303 63.0159C133.246 63.0159 129.085 58.9222 129.018 52.8991C129.052 48.6377 131.803 45.7855 135.796 45.7352H135.914C138.414 45.7352 140.46 47.7988 140.46 49.9631V50.0637C140.41 51.3221 139.403 52.2951 138.145 52.2951C136.434 52.2951 135.041 53.6877 135.041 55.399C135.041 57.1103 136.434 58.5028 138.145 58.5028C142.843 58.5028 146.685 54.6943 146.685 49.9631C146.685 49.8121 146.651 49.6611 146.634 49.5269C146.383 43.9736 141.836 39.5443 135.83 39.5443H83.3166L82.9139 39.5275H82.4945L30.8369 39.5443C24.8305 39.5443 20.2839 43.9736 20.0322 49.5269C20.0154 49.6611 19.9819 49.8121 19.9819 49.9631C19.9819 54.6943 23.8239 58.5028 28.5216 58.5028C30.2329 58.5028 31.6254 57.1103 31.6254 55.399C31.6254 53.6877 30.2329 52.2951 28.5216 52.2951C27.2633 52.2951 26.2566 51.3221 26.1895 50.0637C26.1895 50.0302 26.2063 49.9966 26.2063 49.9631C26.2063 47.7988 28.2364 45.7352 30.753 45.7352H30.8536C34.8634 45.7855 37.6149 48.6377 37.6485 52.8991C37.5814 58.9222 33.4038 63.0159 27.3639 63.0159C19.4114 63.0159 13.8749 56.5902 13.8749 49.0571C13.8749 38.89 21.8442 32.7495 31.6925 32.7495H134.974C144.822 32.7495 152.792 38.89 152.792 49.0571C152.792 56.5902 147.255 63.0159 139.303 63.0159Z"
+    fill="currentColor"
+  />
+</svg>
+</div>
+        <div class="banner-text-container">
+          <p class="banner-text banner-upper-text">Built with Arena</p>
+          <p class="banner-text banner-lower-text">Content is user-generated and unverified</p>
+        </div>
       </a>
-      <div class="mobile-toggle" id="mobile-toggle">
-        <i class="fa-solid fa-bars"></i>
+      <div class="banner-action-container banner-padding">
+        <button
+          class="action-btn report-content-btn"
+          style="display: none"
+          onclick="reportContent(event)"
+          aria-label="Report content"
+        >
+          <svg class="report-icon" width="20" height="20"><use href="#icon-flag" /></svg>
+        </button>
+        <button class="action-btn" onclick="dismissBanner(event)" aria-label="Close banner">
+          <svg width="20" height="20"><use href="#icon-close" /></svg>
+        </button>
       </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Proof of Work</a></li>
-        <li><a href="#compliance">B-BBEE</a></li>
-        <li><a href="#contact" class="btn-nav">Get a Quote</a></li>
-      </ul>
     </div>
-  </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <div class="badge-group">
-        <span class="badge"><i class="fa-solid fa-shield-halved"></i> 100% Black Youth-Owned</span>
-        <span class="badge badge-gold"><i class="fa-solid fa-award"></i> B-BBEE Level 1 Contributor</span>
-      </div>
-      <h1>Mining Supplies, Commodity Trading, Plant Hire & Logistics</h1>
-      <p>Delivering heavy machinery, commodity trading, specialized industrial supplies, and reliable transport infrastructure nationwide across South Africa.</p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn-primary">Request Equipment & Rates <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="#services" class="btn-secondary">Explore Our Services</a>
-      </div>
+    <div class="iframe-container">
+      <iframe
+        id="preview-iframe"
+        src="https://019fb1f0-b57b-7cbf-98d7-37a5121a3627.arena.site/?embed=true"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-presentation allow-popups allow-popups-to-escape-sandbox allow-downloads allow-top-navigation-by-user-activation"
+        allow="
+          accelerometer;
+          autoplay;
+          camera;
+          encrypted-media;
+          fullscreen;
+          geolocation;
+          gyroscope;
+          microphone;
+          midi;
+          clipboard-read;
+          clipboard-write;
+          usb;
+          vr;
+          xr-spatial-tracking;
+          screen-wake-lock;
+          magnetometer;
+          ambient-light-sensor;
+          battery;
+          gamepad;
+          picture-in-picture;
+          display-capture;
+          bluetooth;
+        "
+        referrerpolicy="origin-when-cross-origin"
+      ></iframe>
     </div>
-  </section>
 
-  <div class="stats-bar">
-    <div class="stats-container">
-      <div class="stat-item">
-        <h3>Level 1</h3>
-        <p>B-BBEE Contributor</p>
-      </div>
-      <div class="stat-item">
-        <h3>100%</h3>
-        <p>Black Youth Ownership</p>
-      </div>
-      <div class="stat-item">
-        <h3>Nationwide</h3>
-        <p>Coverage Across South Africa</p>
-      </div>
-      <div class="stat-item">
-        <h3>24/7</h3>
-        <p>Site Fleet Support</p>
-      </div>
-    </div>
-  </div>
+    <script>
+      const iframe = document.getElementById("preview-iframe");
+      iframe.addEventListener("load", () => iframe.focus());
 
-  <section id="services">
-    <div class="section-title">
-      <h2>Core Operational Solutions</h2>
-      <p>Tailored supply chain, commodity trading, and heavy machinery support for mining operations, infrastructure, and civil works across South Africa.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
-        <h3>Commodity Trading</h3>
-        <p>Procurement, trading, and supply chain management of bulk mineral commodities and essential industrial materials nationwide.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-truck-monster"></i></div>
-        <h3>Plant Hire & Fleet</h3>
-        <p>Heavy earthmoving equipment including excavator hire, articulated dump trucks (ADTs), TLBs, graders, and rollers maintained to strict safety standards.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
-        <h3>Mining Supplies & PPE</h3>
-        <p>Comprehensive procurement of SABS-approved safety PPE, industrial tools, site consumables, and specialized mining hardware.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-route"></i></div>
-        <h3>Logistics & Haulage</h3>
-        <p>End-to-end material transport, bulk haulage, and site logistics operations designed to maximize uptime across South Africa.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-helmet-safety"></i></div>
-        <h3>Civil & Earthworks</h3>
-        <p>Professional site preparation, trenching, road maintenance, and civil construction support tailored to high-compliance mining environments.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="equipment-section" id="gallery">
-    <div class="section-title">
-      <h2>Proof of Work & Gallery</h2>
-      <p>A look at our modern equipment, commodity trading operations, and fleet delivered across South Africa.</p>
-    </div>
-    <div class="equipment-grid">
-      <div class="equip-card">
-        <img src="https://images.unsplash.com/photo-1579412690850-bd41cd0af397?auto=format&fit=crop&w=800&q=80" alt="Plant Hire & Excavation" class="equip-img" />
-        <div class="equip-body">
-          <h3>Heavy Machinery & Plant Hire</h3>
-          <p>Excavator and earthmoving machinery operational on project sites.</p>
-        </div>
-      </div>
-      <div class="equip-card">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Logistics & Haulage" class="equip-img" />
-        <div class="equip-body">
-          <h3>Logistics & Freight Haulage</h3>
-          <p>Bulk transportation and material transport services across South Africa.</p>
-        </div>
-      </div>
-      <div class="equip-card">
-        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Mining Safety PPE" class="equip-img" />
-        <div class="equip-body">
-          <h3>Mining Supplies & PPE</h3>
-          <p>High-quality protective gear and specialized industrial safety wear.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="about-container">
-      <div class="about-text">
-        <h2>Nationwide Operational Excellence</h2>
-        <p><strong>Nhone Trading Enterprise</strong> is a 100% Black Youth-Owned business operating across South Africa, delivering high-performance operational reliability.</p>
-        <p>We supply major mining operations, civil contractors, and industrial partners across the country with flexible fleet solutions, commodity trading, swift supply delivery, and safety compliance.</p>
-        <ul class="feature-list">
-          <li><i class="fa-solid fa-circle-check"></i> 100% Black Youth-Owned Enterprise</li>
-          <li><i class="fa-solid fa-circle-check"></i> B-BBEE Level 1 Recognition (135% Procurement Recognition)</li>
-          <li><i class="fa-solid fa-circle-check"></i> Compliant with Mine Health and Safety Act (MHSA) Standards</li>
-          <li><i class="fa-solid fa-circle-check"></i> Nationwide Fleet & Commodity Capabilities</li>
-        </ul>
-      </div>
-      <div class="about-box" id="compliance">
-        <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 1rem;">Empowerment & Value</h3>
-        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Partnering with Nhone Trading Enterprise directly optimizes your procurement scoring while ensuring peak operational performance.</p>
-        <div style="background: var(--dark-navy); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary);">
-          <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Nationwide Reach & Service</h4>
-          <p style="font-size: 0.9rem; color: var(--text-muted);">We prioritize youth development, sustainable economic growth, and dependable service execution across South Africa.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" style="background: #0b1120;">
-    <div class="section-title">
-      <h2>Contact Us</h2>
-      <p>Send us a message or request a quotation for machinery hire, commodity trading, logistics, or mining supply contracts.</p>
-    </div>
-    <div class="contact-container">
-      <div class="contact-info">
-        <div class="info-item">
-          <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
-          <div class="info-text">
-            <h4>Phone Numbers</h4>
-            <p><a href="tel:0625041508">062 504 1508</a> / <a href="tel:0662246016">066 224 6016</a></p>
-          </div>
-        </div>
-        <div class="info-item">
-          <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
-          <div class="info-text">
-            <h4>Email Inquiries</h4>
-            <p><a href="mailto:ntsakonhone01@gmail.com">ntsakonhone01@gmail.com</a></p>
-            <p><a href="mailto:vhuthuhawetshikomba18@gmail.com">vhuthuhawetshikomba18@gmail.com</a></p>
-          </div>
-        </div>
-        <div class="info-item">
-          <div class="info-icon"><i class="fa-solid fa-earth-africa"></i></div>
-          <div class="info-text">
-            <h4>Location & Service Area</h4>
-            <p>Nationwide, South Africa</p>
-          </div>
-        </div>
-        <div class="info-item">
-          <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
-          <div class="info-text">
-            <h4>Operating Hours</h4>
-            <p>Monday – Friday: 07:00 – 17:00<br />Site Support: 24/7 Available</p>
-          </div>
-        </div>
-      </div>
-
-      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for contacting Nhone Trading Enterprise. We will respond shortly.');">
-        <div class="form-group">
-          <label for="name">Full Name / Company Representative</label>
-          <input type="text" id="name" placeholder="Enter your name" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Work Email Address</label>
-          <input type="email" id="email" placeholder="yourname@company.co.za" required />
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" placeholder="062 504 1508" required />
-        </div>
-        <div class="form-group">
-          <label for="service">Service Required</label>
-          <select id="service">
-            <option>Commodity Trading</option>
-            <option>Plant Hire / Equipment Lease</option>
-            <option>Mining Supplies & PPE Procurement</option>
-            <option>Logistics & Transport</option>
-            <option>Civil Earthworks Contracting</option>
-            <option>General Quotation</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">Project Details or Requirements</label>
-          <textarea id="message" rows="4" placeholder="Specify equipment required, location, commodity trading details, or supply requirements..." required></textarea>
-        </div>
-        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; border: none; cursor: pointer;">Submit Request</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-container">
-      <div class="footer-col">
-        <a href="#" class="brand-logo" style="margin-bottom: 1rem;">NHONE <span>TRADING</span></a>
-        <p>100% Black Youth-Owned B-BBEE Level 1 Enterprise delivering specialized plant hire, commodity trading, mining supplies, and civil logistics nationwide.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul class="footer-links">
-          <li><a href="#about">About Enterprise</a></li>
-          <li><a href="#services">Our Core Services</a></li>
-          <li><a href="#gallery">Proof of Work</a></li>
-          <li><a href="#compliance">B-BBEE Compliance</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul class="footer-links">
-          <li><a href="#services">Commodity Trading</a></li>
-          <li><a href="#services">Excavator & ADT Hire</a></li>
-          <li><a href="#services">SABS Mining PPE</a></li>
-          <li><a href="#services">Material Logistics</a></li>
-          <li><a href="#services">Site Earthworks</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact Info</h4>
-        <p>Phone: 062 504 1508 / 066 224 6016</p>
-        <p>Email: ntsakonhone01@gmail.com</p>
-        <p>Location: South Africa (Nationwide)</p>
-      </div>
-    </div>
-    <div class="copyright">
-      <p>&copy; 2026 Nhone Trading Enterprise. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script>
-    // Mobile Navigation Toggle
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const navLinks = document.getElementById('nav-links');
-
-    mobileToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-
-    // Close mobile nav when clicking links
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+      document.addEventListener("DOMContentLoaded", () => {
+        if (!hasStorageKey("code_reported") || !hasStorageKey("survey_completed")) {
+          document.querySelector(".report-content-btn").style.display = "block";
+        }
       });
-    });
-  </script>
+
+      function onCodePreviewBannerCTAClicked(event) {
+        posthog?.capture?.("code_preview_banner_cta_clicked");
+      }
+
+      function reportContent(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        if (!posthog || !posthog.capture || !posthog.setPersonProperties || !posthog.displaySurvey) return;
+
+        if (!hasStorageKey("survey_completed")) {
+          posthog.setPersonProperties?.({
+            last_reported_message_id: MESSAGE_ID,
+            last_report_timestamp: Date.now(),
+          });
+          posthog.displaySurvey?.(REPORT_SURVEY_ID, {
+            ignoreConditions: true,
+            ignoreDelay: true,
+          });
+        }
+      }
+
+      function dismissBanner(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        posthog?.capture?.("code_preview_banner_dismiss");
+
+        const banner = document.getElementById("floating-banner");
+        banner.classList.add("dismissed");
+        setTimeout(() => banner.remove(), 300);
+      }
+    </script>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"cfb6543e268d4ceb92c8170675caa481","r":1}' crossorigin="anonymous"></script>
 </body>
 </html>
