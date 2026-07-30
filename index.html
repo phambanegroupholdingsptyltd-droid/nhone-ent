@@ -8,7 +8,7 @@
   <meta name="keywords" content="plant hire South Africa, mining supplies, commodity trading, B-BBEE Level 1 supplier, logistics South Africa, civil works mining, dump truck hire, excavator hire, mining PPE supplies" />
   <meta name="author" content="Nhone Trading Enterprise" />
   <meta property="og:title" content="Nhone Trading Enterprise — Mining Supplies, Plant Hire, Commodity Trading & Logistics" />
-  <meta property="og:description" content="100% Black Youth-Owned, B-BBEE Level 1 provider for mining operations, commodity trading, plant hire and logistics nationwide." />
+  <meta property="og:description" content="100% Black Youth-Owned, B-BBEE Level 1 mining supply, commodity trading, plant hire, logistics and civil works company operating nationwide." />
   <meta property="og:type" content="website" />
   <meta name="robots" content="index, follow" />
 
@@ -22,8 +22,8 @@
     :root {
       --primary: #f97316;       /* Industrial Orange */
       --primary-hover: #ea580c;
-      --dark-navy: #0f172a;     /* Main Dark Background */
-      --card-bg: #1e293b;       /* Card Background */
+      --dark-navy: #0f172a;     /* Main Dark Slate Background */
+      --card-bg: #1e293b;       /* Card Slate */
       --text-light: #f8fafc;
       --text-muted: #94a3b8;
       --accent-gold: #eab308;
@@ -130,7 +130,7 @@
       padding: 180px 2rem 120px;
       background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.8)), 
                   url('https://images.unsplash.com/photo-1578507065211-1c4e99a5fd24?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-      min-height: 85vh;
+      min-height: 90vh;
       display: flex;
       align-items: center;
     }
@@ -168,7 +168,7 @@
     }
 
     .hero h1 {
-      font-size: 3.3rem;
+      font-size: 3.5rem;
       font-weight: 900;
       line-height: 1.15;
       margin-bottom: 1.5rem;
@@ -176,9 +176,9 @@
     }
 
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       color: var(--text-muted);
-      max-width: 750px;
+      max-width: 700px;
       margin-bottom: 2.5rem;
     }
 
@@ -254,13 +254,13 @@
 
     /* --- Section Shared Styles --- */
     section {
-      padding: 90px 2rem;
+      padding: 100px 2rem;
     }
 
     .section-title {
       text-align: center;
       max-width: 700px;
-      margin: 0 auto 50px;
+      margin: 0 auto 60px;
     }
 
     .section-title h2 {
@@ -279,7 +279,7 @@
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
       gap: 2rem;
     }
 
@@ -319,12 +319,12 @@
       font-size: 0.95rem;
     }
 
-    /* --- Gallery / Proof of Work Section --- */
-    .gallery-section {
+    /* --- Equipment / Gallery Showcase --- */
+    .equipment-section {
       background: #0b1120;
     }
 
-    .gallery-grid {
+    .equipment-grid {
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
@@ -332,37 +332,32 @@
       gap: 2rem;
     }
 
-    .gallery-card {
+    .equip-card {
       background: var(--card-bg);
       border-radius: 12px;
       overflow: hidden;
       border: 1px solid var(--border);
-      transition: transform 0.3s;
     }
 
-    .gallery-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .gallery-img {
-      height: 240px;
+    .equip-img {
+      height: 220px;
       width: 100%;
       object-fit: cover;
-      display: block;
     }
 
-    .gallery-body {
+    .equip-body {
       padding: 1.5rem;
     }
 
-    .gallery-body h3 {
+    .equip-body h3 {
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
     }
 
-    .gallery-body p {
+    .equip-body p {
       color: var(--text-muted);
       font-size: 0.9rem;
+      margin-bottom: 1rem;
     }
 
     /* --- About / B-BBEE Section --- */
@@ -410,6 +405,18 @@
       border-radius: 16px;
       padding: 3rem;
       position: relative;
+    }
+
+    .about-box::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, var(--primary), transparent);
+      border-radius: 18px;
+      z-index: -1;
     }
 
     /* --- Contact Section --- */
@@ -601,7 +608,7 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="#about">About Us</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Proof of Work</a></li>
+        <li><a href="#fleet">Plant & Gallery</a></li>
         <li><a href="#compliance">B-BBEE</a></li>
         <li><a href="#contact" class="btn-nav">Get a Quote</a></li>
       </ul>
@@ -615,7 +622,7 @@
         <span class="badge badge-gold"><i class="fa-solid fa-award"></i> B-BBEE Level 1 Contributor</span>
       </div>
       <h1>Mining Supplies, Commodity Trading, Plant Hire & Logistics</h1>
-      <p>Delivering premium heavy machinery, mineral commodity trading, industrial equipment, and efficient transport infrastructure nationwide across South Africa.</p>
+      <p>Delivering heavy machinery, commodity trading, specialized industrial supplies, and reliable transport infrastructure nationwide across South Africa.</p>
       <div class="hero-buttons">
         <a href="#contact" class="btn-primary">Request Equipment & Rates <i class="fa-solid fa-arrow-right"></i></a>
         <a href="#services" class="btn-secondary">Explore Our Services</a>
@@ -635,74 +642,77 @@
       </div>
       <div class="stat-item">
         <h3>Nationwide</h3>
-        <p>Service Coverage</p>
+        <p>Coverage Across South Africa</p>
       </div>
       <div class="stat-item">
         <h3>24/7</h3>
-        <p>Operations & Site Support</p>
+        <p>Site Fleet Support</p>
       </div>
     </div>
   </div>
 
   <section id="services">
     <div class="section-title">
-      <h2>Our Core Services</h2>
-      <p>Comprehensive supply chain solutions, plant hire, and commodity trading services tailored to mining operations and commercial projects across South Africa.</p>
+      <h2>Core Operational Solutions</h2>
+      <p>Tailored supply chain, commodity trading, and heavy machinery support for mining operations, infrastructure, and civil works across South Africa.</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
         <h3>Commodity Trading</h3>
-        <p>Procurement, trading, and supply chain management of key bulk mineral commodities and raw materials for domestic and industrial markets.</p>
+        <p>Procurement, trading, and supply chain management of bulk mineral commodities and essential industrial materials nationwide.</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><i class="fa-solid fa-truck-monster"></i></div>
-        <h3>Plant Hire & Machinery</h3>
-        <p>Heavy earthmoving equipment including excavator hire, dump trucks, TLBs, graders, and compactors maintained to rigorous safety standards.</p>
+        <h3>Plant Hire & Fleet</h3>
+        <p>Heavy earthmoving equipment including excavator hire, articulated dump trucks (ADTs), TLBs, graders, and rollers maintained to strict safety standards.</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
         <h3>Mining Supplies & PPE</h3>
-        <p>Supply and delivery of SABS-approved personal protective equipment (PPE), specialized industrial tools, consumables, and site equipment.</p>
+        <p>Comprehensive procurement of SABS-approved safety PPE, industrial tools, site consumables, and specialized mining hardware.</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><i class="fa-solid fa-route"></i></div>
         <h3>Logistics & Haulage</h3>
-        <p>End-to-end bulk transportation, material haulage, and site logistics operations engineered to maximize efficiency across South Africa.</p>
+        <p>End-to-end material transport, bulk haulage, and site logistics operations designed to maximize uptime across South Africa.</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><i class="fa-solid fa-helmet-safety"></i></div>
         <h3>Civil & Earthworks</h3>
-        <p>Professional site preparation, trenching, road works, and civil engineering contract support designed for demanding site environments.</p>
+        <p>Professional site preparation, trenching, road maintenance, and civil construction support tailored to high-compliance mining environments.</p>
       </div>
     </div>
   </section>
 
-  <section class="gallery-section" id="gallery">
+  <section class="equipment-section" id="fleet">
     <div class="section-title">
-      <h2>Proof of Work & Gallery</h2>
-      <p>A look at our fleet, commodity operations, and on-site projects delivered nationwide.</p>
+      <h2>Proof of Work & Gallery Showcase</h2>
+      <p>Modern equipment, commodity trading, and fleet operations delivered across South Africa.</p>
     </div>
-    <div class="gallery-grid">
-      <div class="gallery-card">
-        <img src="https://images.unsplash.com/photo-1579412690850-bd41cd0af397?auto=format&fit=crop&w=800&q=80" alt="Plant Hire & Excavation" class="gallery-img" />
-        <div class="gallery-body">
-          <h3>Heavy Machinery & Plant Hire</h3>
-          <p>Excavator and earthmoving machinery operational on project sites.</p>
+    <div class="equipment-grid">
+      <div class="equip-card">
+        <img src="https://images.unsplash.com/photo-1579412690850-bd41cd0af397?auto=format&fit=crop&w=800&q=80" alt="Excavator Hire" class="equip-img" />
+        <div class="equip-body">
+          <h3>Heavy Duty Excavators</h3>
+          <p>20T - 40T excavators equipped for heavy earthmoving, rock loading, and trench excavation.</p>
+          <a href="#contact" style="color: var(--primary); font-weight: 600; text-decoration: none;">Book Equipment &rarr;</a>
         </div>
       </div>
-      <div class="gallery-card">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Logistics & Haulage" class="gallery-img" />
-        <div class="gallery-body">
-          <h3>Logistics & Freight Haulage</h3>
-          <p>Bulk transportation and material transport services across South Africa.</p>
+      <div class="equip-card">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Dump Truck Hire" class="equip-img" />
+        <div class="equip-body">
+          <h3>Articulated Dump Trucks</h3>
+          <p>High-capacity 30T dump trucks designed for demanding mining terrain and bulk earth haulage.</p>
+          <a href="#contact" style="color: var(--primary); font-weight: 600; text-decoration: none;">Book Equipment &rarr;</a>
         </div>
       </div>
-      <div class="gallery-card">
-        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Mining PPE & Supplies" class="gallery-img" />
-        <div class="gallery-body">
-          <h3>Mining Supplies & PPE</h3>
-          <p>High-quality protective gear and specialized industrial safety wear.</p>
+      <div class="equip-card">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Mining Safety PPE" class="equip-img" />
+        <div class="equip-body">
+          <h3>Mining Safety PPE & Supplies</h3>
+          <p>Full spectrum mining safety wear, specialized footwear, gas detection masks, and site equipment.</p>
+          <a href="#contact" style="color: var(--primary); font-weight: 600; text-decoration: none;">Order Supplies &rarr;</a>
         </div>
       </div>
     </div>
@@ -712,21 +722,21 @@
     <div class="about-container">
       <div class="about-text">
         <h2>Nationwide Operational Excellence</h2>
-        <p><strong>Nhone Trading Enterprise</strong> is a premier 100% Black Youth-Owned business operating across South Africa.</p>
-        <p>We provide industrial clients, mining operators, and civil contractors with high-performance plant equipment, commodity trading services, and dependable supply chain logistics.</p>
+        <p><strong>Nhone Trading Enterprise</strong> is a 100% Black Youth-Owned business operating across South Africa, delivering high-performance operational reliability.</p>
+        <p>We supply major mining operations, civil contractors, and industrial partners across the country with flexible fleet solutions, commodity trading, swift supply delivery, and safety compliance.</p>
         <ul class="feature-list">
-          <li><i class="fa-solid fa-circle-check"></i> 100% Black Youth-Owned Business</li>
+          <li><i class="fa-solid fa-circle-check"></i> 100% Black Youth-Owned Enterprise</li>
           <li><i class="fa-solid fa-circle-check"></i> B-BBEE Level 1 Recognition (135% Procurement Recognition)</li>
-          <li><i class="fa-solid fa-circle-check"></i> Nationwide Fleet & Commodity Trading Capabilities</li>
-          <li><i class="fa-solid fa-circle-check"></i> Compliant with Health and Safety Operational Standards</li>
+          <li><i class="fa-solid fa-circle-check"></i> Compliant with Mine Health and Safety Act (MHSA) Standards</li>
+          <li><i class="fa-solid fa-circle-check"></i> Nationwide Fleet & Commodity Capabilities</li>
         </ul>
       </div>
       <div class="about-box" id="compliance">
-        <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 1rem;">Empowerment & Value</h3>
-        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Partnering with Nhone Trading Enterprise directly optimizes your local procurement scoring while delivering reliable project execution.</p>
+        <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 1rem;">Empowerment & Procurement Benefits</h3>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Partnering with Nhone Trading Enterprise directly optimizes your procurement scoring while ensuring peak operational performance.</p>
         <div style="background: var(--dark-navy); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary);">
-          <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Nationwide Reach</h4>
-          <p style="font-size: 0.9rem; color: var(--text-muted);">We are equipped to mobilize teams, machinery, and commodity trading pipelines to sites throughout South Africa.</p>
+          <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Nationwide Reach & Service</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">We prioritize youth development, sustainable economic growth, and dependable service execution across South Africa.</p>
         </div>
       </div>
     </div>
@@ -735,7 +745,7 @@
   <section id="contact" style="background: #0b1120;">
     <div class="section-title">
       <h2>Contact Us</h2>
-      <p>Get in touch for quotations, equipment hire rates, commodity trading inquiries, or contract tenders.</p>
+      <p>Send us a message or request a quotation for machinery hire, commodity trading, logistics, or mining supply contracts.</p>
     </div>
     <div class="contact-container">
       <div class="contact-info">
@@ -749,7 +759,7 @@
         <div class="info-item">
           <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
           <div class="info-text">
-            <h4>Email Addresses</h4>
+            <h4>Email Inquiries</h4>
             <p><a href="mailto:ntsakonhone01@gmail.com">ntsakonhone01@gmail.com</a></p>
             <p><a href="mailto:vhuthuhawetshikomba18@gmail.com">vhuthuhawetshikomba18@gmail.com</a></p>
           </div>
@@ -757,31 +767,31 @@
         <div class="info-item">
           <div class="info-icon"><i class="fa-solid fa-earth-africa"></i></div>
           <div class="info-text">
-            <h4>Service Area</h4>
-            <p>Nationwide (South Africa)</p>
+            <h4>Location & Service Area</h4>
+            <p>Nationwide, South Africa</p>
           </div>
         </div>
         <div class="info-item">
           <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
           <div class="info-text">
             <h4>Operating Hours</h4>
-            <p>Monday – Friday: 07:00 – 17:00<br />Site & Fleet Support: Available 24/7</p>
+            <p>Monday – Friday: 07:00 – 17:00<br />Site Support: 24/7 Available</p>
           </div>
         </div>
       </div>
 
-      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for contacting Nhone Trading Enterprise. We will get back to you shortly.');">
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for contacting Nhone Trading Enterprise. We will respond shortly.');">
         <div class="form-group">
           <label for="name">Full Name / Company Representative</label>
           <input type="text" id="name" placeholder="Enter your name" required />
         </div>
         <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="yourname@domain.co.za" required />
+          <label for="email">Work Email Address</label>
+          <input type="email" id="email" placeholder="yourname@company.co.za" required />
         </div>
         <div class="form-group">
           <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" placeholder="e.g. 062 504 1508" required />
+          <input type="tel" id="phone" placeholder="062 504 1508" required />
         </div>
         <div class="form-group">
           <label for="service">Service Required</label>
@@ -789,16 +799,16 @@
             <option>Commodity Trading</option>
             <option>Plant Hire / Equipment Lease</option>
             <option>Mining Supplies & PPE Procurement</option>
-            <option>Logistics & Bulk Transport</option>
+            <option>Logistics & Transport</option>
             <option>Civil Earthworks Contracting</option>
             <option>General Quotation</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="message">Project Requirements & Message</label>
-          <textarea id="message" rows="4" placeholder="Describe your requirements or requested service..." required></textarea>
+          <label for="message">Project Details or Requirements</label>
+          <textarea id="message" rows="4" placeholder="Specify equipment required, location, commodity trading details, or supply requirements..." required></textarea>
         </div>
-        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; border: none; cursor: pointer;">Submit Inquiry</button>
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; border: none; cursor: pointer;">Submit Request</button>
       </form>
     </div>
   </section>
@@ -807,31 +817,32 @@
     <div class="footer-container">
       <div class="footer-col">
         <a href="#" class="brand-logo" style="margin-bottom: 1rem;">NHONE <span>TRADING</span></a>
-        <p>100% Black Youth-Owned B-BBEE Level 1 enterprise providing plant hire, commodity trading, supplies, and civil logistics across South Africa.</p>
+        <p>100% Black Youth-Owned B-BBEE Level 1 Enterprise delivering specialized plant hire, commodity trading, mining supplies, and civil logistics nationwide.</p>
       </div>
       <div class="footer-col">
         <h4>Navigation</h4>
         <ul class="footer-links">
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Our Services</a></li>
-          <li><a href="#gallery">Proof of Work</a></li>
-          <li><a href="#compliance">B-BBEE Status</a></li>
+          <li><a href="#about">About Enterprise</a></li>
+          <li><a href="#services">Our Core Services</a></li>
+          <li><a href="#fleet">Plant & Gallery</a></li>
+          <li><a href="#compliance">B-BBEE Compliance</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <ul class="footer-links">
           <li><a href="#services">Commodity Trading</a></li>
-          <li><a href="#services">Plant & Heavy Machinery Hire</a></li>
-          <li><a href="#services">Mining PPE & Supplies</a></li>
-          <li><a href="#services">Logistics & Haulage</a></li>
+          <li><a href="#services">Excavator & ADT Hire</a></li>
+          <li><a href="#services">SABS Mining PPE</a></li>
+          <li><a href="#services">Material Logistics</a></li>
+          <li><a href="#services">Site Earthworks</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4>Contact Info</h4>
         <p>Phone: 062 504 1508 / 066 224 6016</p>
         <p>Email: ntsakonhone01@gmail.com</p>
-        <p>Coverage: South Africa (Nationwide)</p>
+        <p>Location: South Africa (Nationwide)</p>
       </div>
     </div>
     <div class="copyright">
@@ -848,7 +859,7 @@
       navLinks.classList.toggle('active');
     });
 
-    // Close mobile menu when a menu item is clicked
+    // Close mobile nav when clicking links
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
