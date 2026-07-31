@@ -707,10 +707,13 @@
       <button class="gallery-item" data-category="Site Work" data-index="2"><img src="X22.JPG" alt="Underground mining site work with PPE-clad workers"><span class="gallery-category">Site Work</span></button>
       <button class="gallery-item" data-category="Site Work" data-index="3"><img src="X23.JPG" alt="Civil works and earthmoving at mining site"><span class="gallery-category">Site Work</span></button>
       <button class="gallery-item" data-category="Team" data-index="4"><img src="X24.JPG" alt="Nhone Trading Enterprise team at a mining operation"><span class="gallery-category">Team</span></button>
-      <button class="gallery-item" data-category="Plant Hire" data-index="5"><img src="25.JPG" alt="Mining supplies warehouse with organized equipment"><span class="gallery-category">Plant Hire</span></button>
+      <button class="gallery-item" data-category="Plant Hire" data-index="5"><img src="X25.JPG" alt="Mining supplies warehouse with organized equipment"><span class="gallery-category">Plant Hire</span></button>
       <button class="gallery-item" data-category="Logistics" data-index="6"><img src="X7.jpeg" alt="Mining dump trucks on red earth mining site"><span class="gallery-category">Logistics</span></button>
       <button class="gallery-item" data-category="Site Work" data-index="7"><img src="X8.jpeg" alt="Aerial view of open pit mining operations"><span class="gallery-category">Site Work</span></button>
       <button class="gallery-item" data-category="Plant Hire" data-index="8"><img src="X9.jpeg" alt="Various heavy machinery at mining operation"><span class="gallery-category">Plant Hire</span></button>
+      <button class="gallery-item" data-category="Site Work" data-index="9"><img src="X10.jpeg" alt="Mining site landscape at dusk"><span class="gallery-category">Site Work</span></button>
+      <button class="gallery-item" data-category="Site Work" data-index="9"><img src="X11.jpeg" alt="Mining site landscape at dusk"><span class="gallery-category">Site Work</span></button> 
+      <button class="gallery-item" data-category="Site Work" data-index="9"><img src="X12.jpeg" alt="Mining site landscape at dusk"><span class="gallery-category">Site Work</span></button> -->
       <!-- <button class="gallery-item" data-category="Site Work" data-index="9"><img src="contact-bg.jpg" alt="Mining site landscape at dusk"><span class="gallery-category">Site Work</span></button> -->
     </div></div></section></section>
 
@@ -787,7 +790,7 @@
         if (action === 'quote') { addMessage('Great! Please share your company or mine name, the service you need, site location, and urgency. Our team will follow up with a detailed quote.', 'bot'); addOptions([{ label: 'Open Contact Form', action: 'contact' }, { label: 'Talk to Someone', action: 'human' }]); }
         else if (action === 'compliance') { addMessage('Our current status includes B-BBEE Level 1, 100% Black Youth-Owned, CSD Registered, and Tax Compliant. Please open the contact form and tell us where to send the documents.', 'bot'); addOptions([{ label: 'Open Contact Form', action: 'contact' }, { label: 'Talk to Someone', action: 'human' }]); }
         else if (action === 'services') { addMessage('We offer plant hire, logistics, mining supplies, fuel supply, PPE and safety equipment, civil works, motor trade and repair, and general supply and delivery.', 'bot'); addOptions([{ label: 'View Services', action: 'servicesPage' }, { label: 'Request a Quote', action: 'quote' }]); }
-        else if (action === 'human') { addMessage('You can reach our team directly at 062 504 1508 or ntsakonhone01@gmail.com. I can also open WhatsApp for you.', 'bot'); addOptions([{ label: 'Open WhatsApp', action: 'whatsapp' }, { label: 'Open Contact Form', action: 'contact' }]); }
+        else if (action === 'human') { addMessage('You can reach our team directly at 062 504 1508 or ntsako@nhonetrading.co.za. I can also open WhatsApp for you.', 'bot'); addOptions([{ label: 'Open WhatsApp', action: 'whatsapp' }, { label: 'Open Contact Form', action: 'contact' }]); }
         else if (action === 'contact' || action === 'servicesPage') { showPage(action === 'contact' ? 'contact' : 'services'); }
         else if (action === 'whatsapp') { window.open('https://wa.me/27625041508', '_blank'); }
       }
